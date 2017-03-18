@@ -1,0 +1,103 @@
+<div class="row">
+
+  <div class="col-sm-8 main">
+    <div class="alert alert-danger error" style='display: none;'>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+      <strong>Error!</strong>
+      <p class='error_body'>This is the body of the error</p>
+    </div>
+
+    <div class="alert alert-success win" style='display: none; background: #4BBE12 !important; border: none;'>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+      <strong>Congratulations, You won!</strong>
+      <p class='win_body'>Your balance has now been updated, if you wish to withdraw items, head over to the shop!</p>
+    </div>
+
+    <div class="game module">
+      <div class='row'>
+        <img src="/assets/pin.png" style="position: relative; top: 2.6vh; width: 40vh;">
+        <div class='col-sm-8 col-sm-offset-2 bomb'>
+          <div class="col-sm-10 col-sm-offset-1 bombUI">
+            <h4 class="bombTitle">BOMB GAME</h4>
+            <input class="displayInput luckyNumber" type="text" disabled="true" value="****" name="luckyNumber">
+            <input class="displayInput timeRemaining"  type="time" disabled="true" step="1" name="timeRemaining">
+            <div class='button_container'>
+              <div class="row">
+                <input class="bombButton" type="text" disabled="true" value="0" name="0">
+                <span style="margin-left: 4px;">-</span>
+                <input class="bombButton" type="text" disabled="true" value="9750" name="0">
+                <input class="bombButton resultButton 10coins" type="text" disabled="true" value="10 Coins" name="0">
+              </div>
+              <div class="row">
+                <input class="bombButton" type="text" disabled="true" value="9751" name="0">
+                <span style="margin-left: 4px;">-</span>
+                <input class="bombButton" type="text" disabled="true" value="9850" name="0">
+                <input class="bombButton resultButton 40coins" type="text" disabled="true" value="40 Coins" name="0">
+              </div>
+              <div class="row">
+                <input class="bombButton" type="text" disabled="true" value="9851" name="0">
+                <span style="margin-left: 4px;">-</span>
+                <input class="bombButton" type="text" disabled="true" value="9990" name="0">
+                <input class="bombButton resultButton 100coins" type="text" disabled="true" value="100 Coins" name="0">
+              </div>
+              <div class="row">
+                <input class="bombButton" type="text" disabled="true" value="9991" name="0">
+                <span style="margin-left: 4px;">-</span>
+                <input class="bombButton" type="text" disabled="true" value="9999" name="0">
+                <input class="bombButton resultButton 1000coins" type="text" disabled="true" value="1000 Coins" name="0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class='bet'>
+        <div class='row'>
+          <div class='col-sm-4 col-sm-offset-4'>
+            <h3 class='stat white_stat user_coins'>Coins: {{user.coins}}</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class='col-sm-4 col-sm-offset-4'>
+            <button type="button" class="btn btn-warning roll" style='color: #FFFAE9; width: 85%; font-size: 18px;'>
+              <b>Roll</b>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+  </div>
+  
+  <div class="col-sm-1">
+    <br>
+  </div>
+
+  <div class='col-sm-3 module chat_module'>
+    <h4 style='margin: 0px; text-align: center; padding-top: 3px;'>
+      <b style='color: #2ecc71'>Users Online:</b> <span class='online'>30</span>
+    </h4>
+    <hr>
+    <div class='messages' id='messages'>
+      <div class='message'>
+        <b class='chat_username'>CSGO:</b>
+          <p class='content'>
+            Welcome to CSGO: torgloi,<br> we hope that you enjoy your stay.
+          </p>
+      </div>
+      <hr>
+    </div>
+
+    <div action="" method="POST" class="form-inline" role="form">  
+      <input type="text" class="form-control chat_input" style='width: 100%;' placeholder="Message: Press Enter to Send" onclick="socket.emit('chat', {identifier: '{{user.identifier}}', username: '{{user.displayName}}', message: $('.chat_input').val() });">
+    </div>
+  </div>
+</div>
+
+<div class='identifier' style='display: none;'>{{user.identifier}}</div>
+<div class='secret' style='display: none;'></div>
+<div class='username' style='display: none;'>{{user.displayName}}</div>
+<div class='link' style='display: none;'>{{user._json.profileurl}}</div>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fita Teste</title>
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+
+		<style type="text/css">
+			#mark {
+			   width: .1875rem; 
+			   height: 100%; 
+			   background: white;
+			   position: absolute;
+			   left: 50%;
+			}
+			#case {
+			    max-width: 1050px;
+			    height: 75px;
+			    background-image: url(./images/cases2.png);
+			    background-repeat: no-repeat;
+			    background-position: 0px 0px;
+			    position: relative;
+			    margin: 0px auto;
+			}
+			#pointer {
+			    width: 3px;
+			    background: #ff0;
+			    position: absolute;
+			    left: 50%;
+			    top: 0px;
+			    height: 100%;
+			}
+
+			.ball {
+			    color: white;
+			    cursor: default;
+			    border-radius: 45px;
+			    border: 1px solid transparent;
+			    width: 45px;
+			    height: 45px;
+			    background-color: #000;
+			    font-size: 17px;
+			    line-height: 45px;
+			    padding: 0;
+			    text-align: center;
+			    display: inline-block;
+			    margin: 1px;
+			}
+			.ball-1 {
+			    background-color: #c9302c;
+			}
+
+			.ball-0 {
+			    background-color: #449d44;
+			}
+
+			.ball-8 {
+			    background: #383838;
+			}
+		</style>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!--<div>
+			<div id="product_family_options_dd">
+				<div id="mark">
+					<div id="diamond"></div>
+				</div>
+			</div>
+		</div>-->
+		<div class="text-center" style="margin-bottom:10px;">
+        <div class="progress text-center" style="height:50px;margin-bottom:5px;margin-top:5px">
+          <span id="banner"></span>
+          <div class="progress-bar progress-bar-danger" id="counter"></div>
+        </div>
+
+
+        <div id="case" style="margin-bottom: 5px; background-position: -789px 0px;">
+          <div id="pointer"></div>
+        </div>
+        <div class="well text-center" style="padding:5px;margin-bottom:5px">
+          <div id="past"></div>
+        </div>
+        <div class="well" style="margin-bottom:5px">
+          <div class="input-btn bet-buttons">
+            <div class="form-group">
+              <span style="font-size:18px;font-weight:bold">Balance: <span id="dongers"></span><span id="balance">0</span> <i style="cursor:pointer" class="fa fa-refresh noselect" id="getbal"></i>
+              </span>
+            </div>
+            <div class="form-group">
+              <div class="btn-group">
+                <button type="button" class="btn btn-default betshort" data-action="clear">Clear</button>
+                <button type="button" class="btn btn-default betshort" data-action="last">Last</button>
+                <button type="button" class="btn btn-default betshort" data-action="1">+1</button>
+                <button type="button" class="btn btn-default betshort" data-action="10">+10</button>
+                <button type="button" class="btn btn-default betshort" data-action="100">+100</button>
+                <button type="button" class="btn btn-default betshort" data-action="1000">+1000</button>
+                <button type="button" class="btn btn-default betshort" data-action="half"> 1/2 </button>
+                <button type="button" class="btn btn-default betshort" data-action="double"> x2 </button>
+                <button type="button" class="btn btn-default betshort" data-action="max">Max</button>
+              </div>
+            </div>
+            <input type="text" class="form-control input-lg" placeholder="Bet amount..." id="betAmount">
+          </div>
+        </div>
+      </div>
+		<button id="rodar">Rodar</button>
+		<script src="js/spin.js"></script>
+		<script type="text/javascript">
+		$("#product_family_options_dd").css({
+			"backgroundPosition-x": 0
+		});
+		/*$("#rodar").click(function() {
+			var image_url = $('#product_family_options_dd').css('background-image'), image;
+
+			// Remove url() or in case of Chrome url("")
+			image_url = image_url.match(/^url\("?(.+?)"?\)$/);
+			image_url = image_url[1];
+		    image = new Image();
+			image.src = image_url;
+
+
+			var x = $("#product_family_options_dd").css("backgroundPosition-x");
+			x = x.replace('px', '');
+			console.log(x);
+			var rand = Math.floor(Math.random() * 10000) + 10000;
+			x -= rand;
+			console.log(x);
+			console.log(x-image.width);
+			console.log('rand ' + rand);
+			$("#product_family_options_dd").stop().animate({
+				"background-position-x": x
+			}, {
+				queue:false,
+				duration: 2600,
+				easing: 'easeOutQuart'
+			});
+		});*/
+		$("#rodar").click(function() {
+			rollN = Math.round(Math.random() * 14);
+			spin({
+					type: "roll",
+					roll: "8",
+					rollid: "1",
+					nets: {
+						0: '{ lower: "10", upper: "100", swon: "5", samount: "10"}',
+						1: '{ lower: "10", upper: "100", swon: "5", samount: "10"}',
+						2: '{ lower: "10", upper: "100", swon: "5", samount: "10"}'
+					},
+					length: "250",
+					won: "8",
+					balance: "50",
+					wait: "9",
+					wobble: "17"
+				}
+			);
+		});
+		</script>
+
+	</body>
+</html>

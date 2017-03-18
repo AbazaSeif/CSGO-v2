@@ -1,0 +1,42 @@
+.navbar {
+  background: #1B1B1B;
+}
+
+.navbar img {
+  margin-top: -1px;
+}
+
+.navbar img:hover {
+  opacity: 0.5;
+}
+
+li a:hover {
+  color: #2ecc71 !important;
+}
+
+li a:focus {
+  color: #2ecc71 !important;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  background: #151515;
+}
+
+.dropdown-menu a:hover {
+  color: #27ae60 !important;
+  background: #151515 !important;
+}
+
+a {
+  color: #2ecc71;
+}
+
+a:hover {
+  color: #27ae60;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #27ae60;
+  text-decoration: none;
+}

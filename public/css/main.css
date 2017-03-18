@@ -1,0 +1,290 @@
+#navbar-primary .navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+
+
+#navbar-primary .navbar-nav > li {
+  display: inline-block;
+  float: none;
+}
+
+#navbar-primary .navbar-nav > li > a {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.logout-icon {
+  color: #fff;
+}
+
+.logout-icon:hover {
+  color: #2ecc71;
+}
+
+.blink {
+  color: #FF624F !important;
+}
+
+.displayInput {
+  width: 15vh;
+  height: 5vh;
+  margin-left: 10px;
+  border: 5px solid #242424;
+  background: #C3B900 !important;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.displayInput:focus {
+  outline: 0;
+}
+
+.displayInput::-webkit-outer-spin-button,
+.displayInput::-webkit-inner-spin-button,
+.displayInput::-webkit-clear-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bombButton {
+  background: #9A8A77 !important;
+  width: 12vh;
+  margin-top: 2vh;
+  margin-left: 0.5vh;
+  text-align: center;
+
+  box-shadow: -5px 5px 5px #010102;
+  background: #9A8A77;
+  border-top: solid #C5B7A7 5px;
+  border-right: solid #847866 5px;
+  border-bottom: solid #38312a 5px;
+  border-left: solid #38312a 5px;
+}
+
+.resultButton {
+  margin-left: 5vh;
+}
+
+.bomb {
+  background: #76644E;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+.bombUI {
+  background: #223C34;
+  text-align: center;
+  padding: 2vh;
+}
+
+.module {
+  background: #303030;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.chat {
+  height: 75vh;
+}
+
+.game img {
+  width: 100px;
+  padding-bottom: 20px;
+}
+
+@media(max-width: 700px) {
+  .chat_module {
+    margin: 15px;
+  }
+}
+
+@media(min-width: 700px) {
+  .history {
+    /*position: absolute;*/
+    /*bottom: 0;*/
+  }
+}
+
+.module_header {
+  text-align: center;
+}
+
+.messages {
+  height: 60vh;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+::-webkit-scrollbar:hover { 
+    display: inherit; 
+}
+
+.message {
+  word-wrap: break-word;
+}
+
+.message .chat_username {
+  color: #27ae60;
+}
+
+.chat_input, .chat_input:disabled {
+  background: #181818;
+  color: #D55344;
+  height: 45px;
+  margin-right: 5px;
+}
+
+.chat_button {
+  border: none;
+  background: #D55344;
+  height: 45px;
+  width: 26%;
+}
+
+.game {
+  padding: 20px;
+  text-align: center;
+}
+
+.game .stat {
+  margin-top: -3px;
+}
+
+.cup:hover {
+  opacity: 0.3 !important;
+  cursor: pointer;
+}
+
+.bet_form {
+  padding-top: 20px;
+  width: 100%;
+  display: none;
+  margin: 0;
+  text-align: center;
+}
+
+.bet_input {
+  border: none;
+  height: 45px;
+  background: #202020;
+  color: #E7E7E7;
+  padding-left: 15px;
+  width: 100px;
+}
+
+.bet_submit {
+  border: none;
+  height: 44px;
+  width: 75px;
+}
+
+button:hover {
+  background: #B02B23;
+  color: #000;
+}
+
+.colour {
+  padding-top: 10px;
+  padding-right: 15px;
+  display: inline-block;
+}
+
+.time, .history {
+  padding: 50px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.history {
+  text-align: center;
+  padding-top: 0px;
+  /*padding-bottom: 30px;*/
+}
+
+.item {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  background: #2E2E2E;
+  border-radius: 2px;
+  height: 200px;
+  overflow: hidden;
+  width: 150px;
+  color: #E6E6E6;
+}
+
+.item:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.item > img {
+  /*padding-top: 3px;*/
+  height: 50%;
+  width: 80%;
+}
+
+.item > .name {
+  /*padding-top: 0px;*/
+  /*padding: 10px;*/
+}
+
+.image_container {
+  /*float: left;*/
+  /*position: relative;*/
+}
+
+.cup {
+  /*position: relative;*/
+  /*z-index: 2;*/
+}
+
+.ball {
+  visibility: hidden;
+  margin-left: 30px;
+  margin-top: 50px;
+  position: absolute;
+  top: 0;
+}
+
+.gold_stat {
+  padding-top: 10px;
+  font-size: 23px;
+  color: #F08B00;
+}
+
+.white_stat {
+  padding-top: 10px;
+  font-size: 23px;
+  color: #FFFFFF;
+}
+
+.affiliate_input {
+  color: #FFFFFF;
+  background: #424242;
+  height: 45px;
+}
+
+.affiliate_button {
+  margin-left: 1px;
+  margin-top: -1px;
+  background: #DB1F2B;
+  border: none;
+  height: 45px;
+}
+
+.affiliate_button:hover {
+  background: #961529;
+}
+
+input {
+  color: #E6E6E6 !important;
+  background: #424242 !important;
+}

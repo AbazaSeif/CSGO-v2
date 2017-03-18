@@ -1,0 +1,127 @@
+<div class="row">
+
+  <div class="col-sm-8 main">
+    <div class="alert alert-danger error" style='display: none;'>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+      <strong>Error!</strong>
+      <p class='error_body'>This is the body of the error</p>
+    </div>
+
+    <div class="alert alert-success win" style='display: none; background: #4BBE12 !important; border: none;'>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+      <strong>Congratulations, You won!</strong>
+      <p>Your balance has now been updated, if you wish to withdraw items, head over to the shop!</p>
+    </div>
+
+    <div class='time module'>
+      <h3><span class='timeleft'>Time Remaining: 30 seconds. Waiting for a bet...</span></h3>
+      <div class="progress progress-striped active" style='height: 30px !important;'>
+        <div class="timebar progress-bar progress-bar-danger" style="width: 100%;"></div>
+      </div>  
+    </div>
+
+    <br>
+
+    <div class="game module">
+      <div class='row'>
+        <div class='col-sm-4 green'>
+          <div class='image_container'>
+
+            <img src="/assets/ball_white.png" class='ball white' style='height: 55px; width: 35px;'>
+            <img src="/assets/ball_gold.png" class='ball gold' style='height: 85px; width: 65px; margin-left: 10px;'>
+            <img src="/assets/cup_green.png" class='cup green_cup' width='50%'>
+          </div>
+          <h3 class='stat' id='bets_green'>Bets: 0</h3>
+          <h3 class='stat' id='total_green'>Total: 0</h3>
+        </div>
+        <div class='col-sm-4 red'>
+          <div class='image_container'>
+
+            <img src="/assets/ball_white.png" class='ball white' style='height: 55px; width: 35px;'>
+            <img src="/assets/ball_gold.png" class='ball gold' style='height: 105px; width: 85px; margin-left: 10px;'>
+            <img src="/assets/cup_red.png" class='cup red_cup' width='50%'>
+          </div>
+          <h3 class='stat' id='bets_red'>Bets: 0</h3>
+          <h3 class='stat' id='total_red'>Total: 0</h3>
+        </div>
+        <div class='col-sm-4 blue'>
+          <div class='image_container'>
+
+            <img src="/assets/ball_white.png" class='ball white' style='height: 55px; width: 35px;'>
+            <img src="/assets/ball_gold.png" class='ball gold' style='height: 85px; width: 65px; margin-left: 10px;'>
+            <img src="/assets/cup_blue.png" class='cup blue_cup' width='50%'>
+          </div>
+          <h3 class='stat' id='bets_blue'>Bets: 0</h3>
+          <h3 class='stat' id='total_blue'>Total: 0</h3>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class='gold_bet'>
+        <div class='row'>
+          <div class='col-sm-4'>
+            <h3 class='stat gold_stat' id='bets_gold'>Bets: 0</h3>
+          </div>
+          <div class='col-sm-4'>
+            <button type="button" class="btn btn-warning gold_bet" style='color: #FFFAE9; width: 85%; font-size: 18px;'>
+              <b>Golden Ball:</b> 9x
+            </button>
+          </div>
+          <div class='col-sm-4'>
+            <h3 class='stat gold_stat' id='total_gold'>Total: 0</h3>
+          </div>
+        </div>
+      </div>
+
+
+      <div class='bet_form'>
+        <hr style='margin-top: -7px;'>
+        <center>
+          <div class="form-inline">
+              <input type="number" class="form-control bet_input" placeholder="Amount" style='width: 75%'>
+            <button type="submit" class="btn btn-danger bet_submit">Bet</button>
+          </div>
+        </center>
+      </div>
+    </div>
+
+    <br>
+
+    <div class='module history_module'>
+      <h3 style='margin-top: 0px; text-align: center;'>Previous Draws:</h3>
+      <div class='history'>
+      </div>
+    </div>
+    <br><br>
+  </div>
+  
+  <div class="col-sm-1">
+    <br>
+  </div>
+
+  <div class='col-sm-3 module chat_module'>
+    <h4 style='margin: 0px; text-align: center; padding-top: 3px;'>
+      <b style='color: #E87164'>Users Online:</b> <span class='online'>30</span>
+    </h4>
+    <hr>
+    <div class='messages' id='messages'>
+      <div class='message'>
+        <b class='chat_username'>TripleSkins:</b>
+          <p class='content'>
+            Welcome to TripleSkins: torgloi,<br> we hope that you enjoy your stay.
+          </p>
+      </div>
+      <hr>
+    </div>
+
+    <div action="" method="POST" class="form-inline" role="form">  
+      <input type="text" class="form-control chat_input" style='width: 100%;' placeholder="Message: Press Enter to Send">
+    </div>
+  </div>
+</div>
+
+<div class='identifier' style='display: none;'>{{user.identifier}}</div>
+<div class='secret' style='display: none;'></div>
+<div class='username' style='display: none;'></div>
+<div class='link' style='display: none;'></div>

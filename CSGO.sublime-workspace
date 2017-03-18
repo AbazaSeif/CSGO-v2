@@ -1,0 +1,1367 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bomb",
+				"bombGame_controller\t(bombGame.js)"
+			],
+			[
+				"new",
+				"new_coins"
+			],
+			[
+				"pre",
+				"previousBet"
+			],
+			[
+				"upd",
+				"updateTime\t(game.js)"
+			],
+			[
+				"N",
+				"New_York\t(index.js)"
+			],
+			[
+				"new_",
+				"new_time"
+			],
+			[
+				"prev",
+				"previousBet\t(user.js)"
+			],
+			[
+				"reamining-t",
+				"reamining-time"
+			],
+			[
+				"re",
+				"reamining"
+			],
+			[
+				"ni",
+				"now_time"
+			],
+			[
+				"now",
+				"now_time"
+			],
+			[
+				"conn",
+				"connected\t(main.js)"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"chat",
+				"chat_username"
+			],
+			[
+				"mess",
+				"message"
+			],
+			[
+				"su",
+				"subtract\t(main.js)"
+			],
+			[
+				"timeR",
+				"timeRemaining\t(index.hbs)"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"coins",
+				"coinsWon"
+			],
+			[
+				"coin",
+				"coinsWon"
+			],
+			[
+				"roll",
+				"rolled\t(main.js)"
+			],
+			[
+				"wai",
+				"waitTime"
+			],
+			[
+				"d",
+				"docs"
+			],
+			[
+				"up",
+				"updateTime\t(main.js)"
+			],
+			[
+				"onc",
+				"onclick\tAttr"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"win",
+				"window"
+			],
+			[
+				"url",
+				"url()"
+			],
+			[
+				"ul",
+				"url()"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"sp",
+				"span\tTag"
+			],
+			[
+				"c",
+				"class"
+			],
+			[
+				"val",
+				"value\tAttr"
+			],
+			[
+				"borde",
+				"border"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"fi",
+				"function"
+			],
+			[
+				"cli",
+				"clickListener"
+			],
+			[
+				"game",
+				"gamestate"
+			],
+			[
+				"con",
+				"controllers\t(routes.js)"
+			],
+			[
+				"socket",
+				"socket.io"
+			],
+			[
+				"tr",
+				"trade"
+			],
+			[
+				"use",
+				"users"
+			],
+			[
+				"red",
+				"redirect"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"me",
+				"messages\t(index.hbs)"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"over",
+				"overflow-x"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"hi",
+				"height"
+			],
+			[
+				"s",
+				"scroll"
+			],
+			[
+				"b",
+				"b\tTag"
+			],
+			[
+				"coll",
+				"column-rule"
+			],
+			[
+				"doc",
+				"docs"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"depos",
+				"deposit"
+			],
+			[
+				"depo",
+				"deposit\t(routes.js)"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"daa",
+				"data-toggle"
+			],
+			[
+				"res",
+				"resolve"
+			],
+			[
+				"id",
+				"identifier"
+			],
+			[
+				"ste",
+				"steamcommunity.com"
+			],
+			[
+				"trade",
+				"tradelink"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"se",
+				"session"
+			],
+			[
+				"sess",
+				"session\t(index.js)"
+			],
+			[
+				"gren",
+				"green_blue"
+			],
+			[
+				"gre",
+				"green_red"
+			],
+			[
+				"gr",
+				"green_red"
+			],
+			[
+				"marin",
+				"margin-bottom"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"with",
+				"withdraw"
+			],
+			[
+				"navbar-",
+				"navbar-nav\t(theme.css)"
+			],
+			[
+				"li",
+				"li\tTag"
+			],
+			[
+				"na",
+				"navbar"
+			],
+			[
+				"nav-sta",
+				"navbar-static-top\t(theme.css)"
+			],
+			[
+				"nav",
+				"navbar\tnavbar"
+			],
+			[
+				"pass",
+				"passportLogic\t(index.js)"
+			],
+			[
+				"de",
+				"debug"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"ini",
+				"initialised"
+			],
+			[
+				"get",
+				"app.get(path, callback [, callback ...])"
+			],
+			[
+				"e",
+				"express-session"
+			],
+			[
+				"B",
+				"bcrypt"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"a",
+				"ArticleSchema"
+			],
+			[
+				"co",
+				"cookieParser"
+			],
+			[
+				"bod",
+				"bodyParser"
+			],
+			[
+				"exp",
+				"exphbs"
+			],
+			[
+				"ex",
+				"express"
+			],
+			[
+				"csg",
+				"CSGO"
+			],
+			[
+				"ro",
+				"rootPath"
+			],
+			[
+				"roo",
+				"root"
+			],
+			[
+				"flex",
+				"flex-direction"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"al",
+				"align-items"
+			],
+			[
+				"rol",
+				"rollN"
+			],
+			[
+				"Steam",
+				"SteamInventory"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "routes.js",
+			"settings":
+			{
+				"buffer_size": 1070,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/home.js",
+			"settings":
+			{
+				"buffer_size": 318,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "sockets.js",
+			"settings":
+			{
+				"buffer_size": 994,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/game.js",
+			"settings":
+			{
+				"buffer_size": 5590,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/bombGame.js",
+			"settings":
+			{
+				"buffer_size": 2246,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/chat.js",
+			"settings":
+			{
+				"buffer_size": 653,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/js/main.js",
+			"settings":
+			{
+				"buffer_size": 4221,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/user.js",
+			"settings":
+			{
+				"buffer_size": 1346,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/index.hbs",
+			"settings":
+			{
+				"buffer_size": 4674,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/layouts/main.hbs",
+			"settings":
+			{
+				"buffer_size": 3081,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/auth.js",
+			"settings":
+			{
+				"buffer_size": 1507,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/css/main.css",
+			"settings":
+			{
+				"buffer_size": 3953,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 5319,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/utils.js",
+			"settings":
+			{
+				"buffer_size": 794,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "in",
+		"selected_items":
+		[
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Install Package Control"
+			],
+			[
+				"jum",
+				"Snippet: bs3-jumbotron"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"nav",
+				"Snippet: static_top_navbar"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/L/CS/Node",
+		"/L/CS/Node/controllers",
+		"/L/CS/Node/public",
+		"/L/CS/Node/public/js",
+		"/L/CS/Node/public/js/Nova pasta",
+		"/L/CS/Node/views",
+		"/L/CS/Node/views/layouts"
+	],
+	"file_history":
+	[
+		"/L/Sublime Text/Data/Packages/User/Package Control.sublime-settings",
+		"/E/CS/Node/views/layouts/main.hbs",
+		"/E/CS/Node/public/css/nav.css",
+		"/C/Users/Thiago/Desktop/Node/index.js",
+		"/C/Users/Thiago/Desktop/Node/controllers/game.js",
+		"/C/Users/Thiago/Desktop/Node/sockets.js",
+		"/C/Users/Thiago/Desktop/Node/public/js/moment.js",
+		"/C/Users/Thiago/Desktop/Node/package.json",
+		"/C/Users/Thiago/Desktop/Node/views/index.hbs",
+		"/C/Users/Thiago/Desktop/Node/controllers/auth.js",
+		"/C/Users/Thiago/Desktop/Node/views/tradelink.hbs",
+		"/C/Users/Thiago/Desktop/Node/views/layouts/main.hbs",
+		"/C/Users/Thiago/Desktop/Node/controllers/user.js",
+		"/C/Users/Thiago/Desktop/Node/controllers/trade.js",
+		"/C/Users/Thiago/Desktop/Node/config.js",
+		"/C/Users/Thiago/Desktop/Node/public/css/main.css",
+		"/C/Users/Thiago/Desktop/Node/public/js/main.js",
+		"/C/Users/Thiago/Desktop/Node/public/css/nav.css",
+		"/C/Users/Thiago/Desktop/Node/routes.js",
+		"/C/Users/Thiago/Desktop/Node/controllers/utils.js",
+		"/C/Users/Thiago/Desktop/Node/controllers/home.js",
+		"/C/Users/Thiago/Desktop/Node/public/css/backend.css",
+		"/C/Users/Thiago/Desktop/Node/public/js/cssbackend.js",
+		"/C/Users/Thiago/Desktop/Node/views/layouts/maien.hbs",
+		"/C/Users/Thiago/Desktop/Node/controllers/sockets.js",
+		"/C/Users/Thiago/Desktop/Node/public/js/theme.min.js",
+		"/C/Users/Thiago/Desktop/Node/public/css/theme.css",
+		"/C/Users/Thiago/Desktop/Node/views/404.hbs",
+		"/C/Users/Thiago/Desktop/Node/views/layouts/index.hbs",
+		"/C/Users/Thiago/Desktop/Node/.gitignore",
+		"/C/Users/Thiago/Desktop/Node/CSGO.sublime-project",
+		"/C/Users/Thiago/Desktop/Node/app/views/socket_test.handlebars",
+		"/C/Users/Thiago/Desktop/Node/app/controllers/socket_test.js",
+		"/C/Users/Thiago/Desktop/Node/app/models/article.js",
+		"/C/Users/Thiago/Desktop/Node/config/express.js",
+		"/C/Users/Thiago/Desktop/Node/app/controllers/home.js",
+		"/C/Users/Thiago/Desktop/Node/app/views/index.hbs",
+		"/C/Users/Thiago/Desktop/Node/app/views/error.hbs",
+		"/C/Users/Thiago/Desktop/Node/config/config.js",
+		"/C/Users/Thiago/Desktop/Node/app/views/layouts/main.handlebars",
+		"/C/Users/Thiago/Desktop/Node/app/views/layouts/main.hbs",
+		"/C/Users/Thiago/Desktop/Node/test.js",
+		"/C/Users/Thiago/Desktop/Node/client/index.html",
+		"/C/Users/Thiago/Desktop/Node/client/index.css",
+		"/C/Users/Thiago/Desktop/Node/WeBuild/assets/css/style.css",
+		"/C/Users/Thiago/Desktop/Node/WeBuild/index.html",
+		"/C/Users/Thiago/Desktop/Node/index.html",
+		"/C/Users/Thiago/Desktop/Node/server.js",
+		"/C/Users/Thiago/Desktop/Node/eapp.js",
+		"/C/Users/Thiago/Desktop/Node/config/config.json",
+		"/C/Users/Thiago/Desktop/Node/config/express",
+		"/C/Users/Thiago/Desktop/Node/sentry",
+		"/C/Users/Thiago/AppData/Roaming/Sublime Text 3/Installed Packages/Material Theme.sublime-package",
+		"/C/Users/Thiago/AppData/Roaming/Sublime Text 3/Packages/zz File Icons/package.json",
+		"/C/Users/Thiago/Desktop/Node/express_example/routes/index.js",
+		"/C/Users/Thiago/Desktop/Node/views/layout.jade",
+		"/C/xampp/htdocs/csgogambling/app/Http/Middleware/VerifyCsrfToken.php",
+		"/C/xampp/htdocs/csgogambling/resources/views/home.blade.php",
+		"/C/xampp/htdocs/csgogambling/app/Http/Controllers/SocketController.php",
+		"/C/xampp/htdocs/csgogambling/config/database.php",
+		"/C/xampp/htdocs/csgogambling/app/Http/Controllers/AuthController.php",
+		"/C/xampp/htdocs/csgogambling/app/Http/Controllers/Auth/AuthController.php",
+		"/C/xampp/htdocs/csgogambling/composer.json",
+		"/C/xampp/htdocs/csgogambling/resources/views/socket.blade.php",
+		"/C/xampp/htdocs/csgogambling/resources/views/layouts/app.blade.php",
+		"/C/xampp/htdocs/csgogambling/config/app.php",
+		"/C/xampp/htdocs/csgogambling/app/Http/Controllers/HomeController.php",
+		"/C/xampp/htdocs/csgogambling/resources/views/writemessage.blade.php",
+		"/C/xampp/htdocs/csgogambling/resources/views/wheelAntigo.blade.php",
+		"/C/xampp/htdocs/csgogambling/node/package.json",
+		"/C/xampp/htdocs/csgogambling/app/Http/routes.php",
+		"/C/xampp/htdocs/csgogambling/app/Http/Kernel.php",
+		"/C/xampp/htdocs/csgogambling/resources/views/app.blade.php",
+		"/C/xampp/htdocs/csgogambling/node/server.js",
+		"/C/xampp/htdocs/csgogambling/vendor/invisnik/laravel-steam-inventory/src/SteamInventory.php",
+		"/C/xampp/htdocs/csgogambling/app/Http/Controllers/Inventory.php",
+		"/C/xampp/htdocs/csgogambling/resources/views/deposit.blade.php",
+		"/C/xampp/htdocs/csgogambling/vendor/invisnik/laravel-steam-auth/src/SteamAuth.php",
+		"/C/xampp/htdocs/csgogambling/app/Http/Controllers/InventoryController.php",
+		"/C/xampp/htdocs/csgogambling/vendor/braseidon/steam-inventory-laravel/src/SteamInventory.php",
+		"/C/xampp/htdocs/csgogambling/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/xampp/htdocs/csgogambling/app/User.php",
+		"/C/xampp/htdocs/csgogambling/.env",
+		"/C/xampp/htdocs/csgogambling/database/migrations/2014_10_12_100000_create_password_resets_table.php",
+		"/C/xampp/htdocs/csgogambling/config/steam-auth.php",
+		"/C/xampp/htdocs/csgogambling/vendor/laravel/framework/src/Illuminate/Support/Facades/Blade.php",
+		"/F/xampp/htdocs/csgogambling/config/app.php"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"game",
+			"previousBet",
+			"roll",
+			"rol",
+			"});\n",
+			"  <",
+			"chat",
+			"waitTime",
+			"toDate",
+			"debug(App.moment().subtract(1, 'hours').isSame(old_time));",
+			"roll",
+			"moment()",
+			"timer",
+			"start2",
+			"start",
+			"new_time",
+			"C50012",
+			"#E05553",
+			"color",
+			"moment",
+			"passport",
+			"// On roll\n    socket.on('roll', (data) => { App.controllers.game.roll(data, socket); });",
+			"game",
+			"debug(",
+			"start()",
+			"';\n",
+			"debug('Here');",
+			" else if(number < 9851) {\n          coinsWon = 10;\n        }",
+			"else if() {\n          \n        }",
+			"new_bet",
+			"subtract",
+			"moment",
+			"'>\n",
+			"top",
+			"value=\"10 Coins\"",
+			"type=\"text\"",
+			"alert",
+			"coin",
+			"<li><a href=\"/deposit\">Deposit</a></li>",
+			"li",
+			"green",
+			"App",
+			"amount",
+			"timer",
+			"else",
+			"1",
+			"urlen",
+			"user",
+			"coin",
+			"app.db",
+			"class",
+			">\n",
+			"scroller",
+			"100",
+			"torgloi",
+			"{{user.displayName}}",
+			"asdasdsadasdasdasdasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdasdasdasdsadasdasdasdasdasdasdasdasdasdasdasdasdsadasdasdasd",
+			"utils",
+			"dropdown",
+			"routes",
+			"a {",
+			"a{",
+			"a.list-group-item-success.ac",
+			"a.list",
+			"a {",
+			"2c3e50",
+			"primary",
+			"home",
+			"session",
+			"ign util",
+			"ress",
+			"spin",
+			"wobble",
+			"m.",
+			"steaminventory",
+			"getdes",
+			"parseitem",
+			"play_s",
+			"finish"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"333333",
+			"292929"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 12,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "routes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1070,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								993,
+								993
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "controllers/home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								252,
+								252
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sockets.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								559,
+								559
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "controllers/game.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3809,
+								3809
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1697.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "controllers/bombGame.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2220,
+								2220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 403.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "controllers/chat.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 653,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								404,
+								404
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "public/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4221,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1448,
+								1448
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 393.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "controllers/user.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1346,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1151,
+								1151
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 210.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "views/index.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4674,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								582,
+								582
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "views/layouts/main.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								657,
+								657
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "controllers/auth.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1507,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								394,
+								394
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 136.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "public/css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3953,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3653,
+								3658
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3031.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5319,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3929,
+								3929
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1437.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "controllers/utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 794,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								434,
+								434
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 63.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "CSGO.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"e",
+				"Emitter"
+			],
+			[
+				"blade",
+				"Blade"
+			]
+		],
+		"width": 398.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
