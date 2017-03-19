@@ -180,5 +180,6 @@ require('./sockets.js')();
 debug('routes required');
 
 /** Start server listening on configured port */
-App.http.listen(App.config.port);
+//App.http.listen(App.config.port);
+App.http.listen(process.env.PORT || App.config.port);
 debug('running on port ' + App.config.port + '.');
