@@ -1,0 +1,8 @@
+{
+  "name": "CSGO",
+  "description": "A csgo gambling site",
+  "repository": "https://github.com/thihxm/CSGO-v2.git",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}

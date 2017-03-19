@@ -24,6 +24,9 @@
     "socket.io": "^1.7.2",
     "util": "^0.10.3"
   },
+  "engine": {
+    "node": "7.4.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thihxm/CSGO-v2.git"
