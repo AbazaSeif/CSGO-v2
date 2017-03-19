@@ -10,7 +10,7 @@ module.exports = function(App) {
 
   return {
 
-    db_path: 'mongodb://localhost/csgo',
+    db_path: 'mongodb://csgo-shard-00-00-5a00a.mongodb.net/csgo',
 
     db_collections: ['users', 'history', 'items'],
 
