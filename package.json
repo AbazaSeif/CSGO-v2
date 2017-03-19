@@ -26,10 +26,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thihxm/CSGO.git"
+    "url": "git+https://github.com/thihxm/CSGO-v2.git"
   },
   "bugs": {
-    "url": "https://github.com/thihxm/CSGO/issues"
+    "url": "https://github.com/thihxm/CSGO-v2/issues"
   },
-  "homepage": "https://github.com/thihxm/CSGO#readme"
+  "homepage": "https://github.com/thihxm/CSGO-v2#readme"
 }
