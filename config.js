@@ -18,7 +18,7 @@ module.exports = function(App) {
      * The port that the app will run on.
      * @type {number}
      */
-    port: 3000,
+    port: 5000,
 
     apiKey: 'BA9E88870743CDF5075ABFD67AE33323'
   };
