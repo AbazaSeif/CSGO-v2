@@ -153,8 +153,10 @@ App.passport.deserializeUser(function(obj, done) {
 });
 
 App.passport.use(new App.SteamStrategy({
-    returnURL: 'http://localhost:3000/auth/return',
-    realm: 'http://localhost:3000/auth',
+    //returnURL: 'http://localhost:3000/auth/return',
+    //realm: 'http://localhost:3000/auth',
+    returnURL: 'http://thihxm.herokuapp.com:5000/auth/return',
+    realm: 'http://thihxm.herokuapp.com:5000/auth',
     apiKey: App.config.apiKey
   }, App.controllers.auth.passportLogic
 ));
