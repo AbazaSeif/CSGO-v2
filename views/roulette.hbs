@@ -1,0 +1,94 @@
+<div class="row">
+
+  <div class="col-sm-8 main">
+    <div class="alert alert-danger error" style='display: none;'>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+      <strong>Error!</strong>
+      <p class='error_body'>This is the body of the error</p>
+    </div>
+
+    <div class="alert alert-success win" style='display: none; background: #4BBE12 !important; border: none;'>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+      <strong>Congratulations, You won!</strong>
+      <p class='win_body'>Your balance has now been updated, if you wish to withdraw items, head over to the shop!</p>
+    </div>
+
+    <div class='time module'>
+      <h3><span class='timeleft'>Time Remaining: 30 seconds. Waiting for a bet...</span></h3>
+      <div class="progress progress-striped active" style='height: 30px !important;'>
+        <div class="timebar progress-bar progress-bar-danger" style="width: 100%;"></div>
+      </div>  
+    </div>
+
+    <br>
+
+    <div class="game module">
+      <div class='row'>
+        <div>
+          <div id="case" style="margin-bottom: 5px; background-position: -789px 0px;">
+            <div id="pointer"></div>
+          </div>
+          <div class="well text-center" style="padding:5px;margin-bottom:5px">
+            <div id="past"></div>
+          </div>
+          <div class="well" style="margin-bottom:5px">
+            <div class="input-btn bet-buttons">
+              <div class="form-group">
+                <span style="font-size:18px;font-weight:bold">Balance: <span id="dongers"></span><span id="balance">{{user.coins}}</span> <i style="cursor:pointer" class="fa fa-refresh noselect" id="getbal"></i>
+                </span>
+              </div>
+              <div class="form-group">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default betshort" data-action="clear">Clear</button>
+                  <button type="button" class="btn btn-default betshort" data-action="last">Last</button>
+                  <button type="button" class="btn btn-default betshort" data-action="1">+1</button>
+                  <button type="button" class="btn btn-default betshort" data-action="10">+10</button>
+                  <button type="button" class="btn btn-default betshort" data-action="100">+100</button>
+                  <button type="button" class="btn btn-default betshort" data-action="1000">+1000</button>
+                  <button type="button" class="btn btn-default betshort" data-action="half"> 1/2 </button>
+                  <button type="button" class="btn btn-default betshort" data-action="double"> x2 </button>
+                  <button type="button" class="btn btn-default betshort" data-action="max">Max</button>
+                </div>
+              </div>
+              <input type="text" class="form-control input-lg" placeholder="Bet amount..." id="betAmount">
+            </div>
+          </div>
+        </div>
+        <button id="rodar" class="btn btn-danger spin">Rodar</button>
+      </div>
+
+      <hr>
+    </div>
+
+    <br>
+  </div>
+  
+  <div class="col-sm-1">
+    <br>
+  </div>
+
+  <div class='col-sm-3 module chat_module'>
+    <h4 style='margin: 0px; text-align: center; padding-top: 3px;'>
+      <b style='color: #2ecc71'>Users Online:</b> <span class='online'>30</span>
+    </h4>
+    <hr>
+    <div class='messages' id='messages'>
+      <div class='message'>
+        <b class='chat_username'>CSGO:</b>
+          <p class='content'>
+            Welcome to CSGO: torgloi,<br> we hope that you enjoy your stay.
+          </p>
+      </div>
+      <hr>
+    </div>
+
+    <div action="" method="POST" class="form-inline" role="form">  
+      <input type="text" class="form-control chat_input" style='width: 100%;' placeholder="Message: Press Enter to Send" onclick="socket.emit('chat', {identifier: '{{user.identifier}}', username: '{{user.displayName}}', message: $('.chat_input').val() });">
+    </div>
+  </div>
+</div>
+
+<div class='identifier' style='display: none;'>{{user.identifier}}</div>
+<div class='secret' style='display: none;'></div>
+<div class='username' style='display: none;'>{{user.displayName}}</div>
+<div class='link' style='display: none;'>{{user._json.profileurl}}</div>

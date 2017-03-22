@@ -1,7 +1,7 @@
 /**
  * Game Controller
  *
- * @controller game
+ * @controller bombGame
  * @return {Class}
  */
 
@@ -9,7 +9,7 @@
 
 let debug = require('debug')('bombGame_controller');
 
-class game {
+class bombGame {
 
   constructor() {
     debug('exported');
@@ -76,4 +76,4 @@ class game {
   }
 }
 
-module.exports = game;
+module.exports = bombGame;

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"rou",
+				"roulette\t(home.js)"
+			],
+			[
+				"gam",
+				"gambling\t(package.json)"
+			],
+			[
 				"bomb",
 				"bombGame_controller\t(bombGame.js)"
 			],
@@ -443,7 +451,7 @@
 			"file": "routes.js",
 			"settings":
 			{
-				"buffer_size": 1070,
+				"buffer_size": 1154,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -452,7 +460,7 @@
 			"file": "controllers/home.js",
 			"settings":
 			{
-				"buffer_size": 318,
+				"buffer_size": 374,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -467,19 +475,64 @@
 			}
 		},
 		{
-			"file": "controllers/game.js",
+			"file": "controllers/bombGame.js",
 			"settings":
 			{
-				"buffer_size": 5590,
+				"buffer_size": 2258,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "controllers/bombGame.js",
+			"file": "controllers/game.js",
 			"settings":
 			{
-				"buffer_size": 2246,
+				"buffer_size": 5588,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/rouletteGame.js",
+			"settings":
+			{
+				"buffer_size": 3288,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/js/spin.js",
+			"settings":
+			{
+				"buffer_size": 7285,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/roulette.hbs",
+			"settings":
+			{
+				"buffer_size": 4273,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/js/roulette.js",
+			"settings":
+			{
+				"buffer_size": 2917,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 5474,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -512,6 +565,24 @@
 			}
 		},
 		{
+			"file": "public/js/Nova pasta/teste.html",
+			"settings":
+			{
+				"buffer_size": 4998,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/css/roulette.css",
+			"settings":
+			{
+				"buffer_size": 867,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "views/index.hbs",
 			"settings":
 			{
@@ -524,8 +595,16 @@
 			"file": "views/layouts/main.hbs",
 			"settings":
 			{
-				"buffer_size": 3081,
+				"buffer_size": 3201,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/cups.hbs",
+			"settings":
+			{
+				"buffer_size": 4751,
 				"line_ending": "Windows"
 			}
 		},
@@ -548,12 +627,21 @@
 			}
 		},
 		{
-			"file": "index.js",
+			"file": "config.js",
 			"settings":
 			{
-				"buffer_size": 5319,
+				"buffer_size": 610,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 963,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -561,6 +649,15 @@
 			"settings":
 			{
 				"buffer_size": 794,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app.json",
+			"settings":
+			{
+				"buffer_size": 249,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -573,8 +670,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "in",
+		"height": 354.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -618,7 +715,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 416.0
+		"width": 398.0
 	},
 	"console":
 	{
@@ -638,16 +735,20 @@
 	},
 	"expanded_folders":
 	[
-		"/L/CS/Node",
-		"/L/CS/Node/controllers",
-		"/L/CS/Node/public",
-		"/L/CS/Node/public/js",
-		"/L/CS/Node/public/js/Nova pasta",
-		"/L/CS/Node/views",
-		"/L/CS/Node/views/layouts"
+		"/E/CS/Node",
+		"/E/CS/Node/controllers",
+		"/E/CS/Node/public",
+		"/E/CS/Node/public/css",
+		"/E/CS/Node/public/js",
+		"/E/CS/Node/views",
+		"/E/CS/Node/views/layouts"
 	],
 	"file_history":
 	[
+		"/E/CS/Node/public/js/Nova pasta/js/spin.js",
+		"/E/CS/Node/public/js/Nova pasta/spin.js",
+		"/E/CS/Node/public/js/Nova pasta/rotate.js",
+		"/L/CS/Node/Procfile",
 		"/L/Sublime Text/Data/Packages/User/Package Control.sublime-settings",
 		"/E/CS/Node/views/layouts/main.hbs",
 		"/E/CS/Node/public/css/nav.css",
@@ -745,6 +846,10 @@
 		"height": 158.0,
 		"where_history":
 		[
+			"<project>,<current file>,<open files>,<open folders>,-*/node_modules/*",
+			"<project>,<current file>,<open files>,<open folders>,-<node_modules>",
+			"<project>,<current file>,<open files>,<open folders>,-node_modules",
+			""
 		]
 	},
 	"find_state":
@@ -752,6 +857,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"game",
+			"bomb",
+			"game",
+			"v(",
+			"d_mod",
+			"getTf",
+			"getVi",
+			"v(",
+			"cd",
+			"lang",
+			"chat",
+			"lang",
+			"hos",
+			"host",
+			"localhost",
+			"App.",
+			"local",
+			"<",
+			"<PASSWOR",
+			"<DATABASE>",
 			"game",
 			"previousBet",
 			"roll",
@@ -850,7 +975,7 @@
 	"groups":
 	[
 		{
-			"selected": 12,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -859,15 +984,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1070,
+						"buffer_size": 1154,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								993,
-								993
+								1045,
+								1045
 							]
 						],
 						"settings":
@@ -880,7 +1005,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
@@ -889,15 +1014,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 318,
+						"buffer_size": 374,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								252,
-								252
+								304,
+								304
 							]
 						],
 						"settings":
@@ -908,7 +1033,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
@@ -938,24 +1063,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "controllers/game.js",
+					"file": "controllers/bombGame.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5590,
+						"buffer_size": 2258,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3809,
-								3809
+								46,
+								46
 							]
 						],
 						"settings":
@@ -965,27 +1090,147 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1697.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "controllers/game.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5588,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2399,
+								2399
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1144.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "controllers/rouletteGame.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								873,
+								873
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 520.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "controllers/bombGame.js",
+					"buffer": 6,
+					"file": "public/js/spin.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2246,
+						"buffer_size": 7285,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2220,
-								2220
+								690,
+								690
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 616.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "views/roulette.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1955,
+								1955
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 305.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/js/roulette.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2917,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2909,
+								2909
 							]
 						],
 						"settings":
@@ -995,14 +1240,44 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 403.0,
+						"translation.y": 1109.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 9,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								825,
+								825
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "controllers/chat.js",
 					"semi_transient": false,
 					"settings":
@@ -1028,11 +1303,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 11,
 					"file": "public/js/main.js",
 					"semi_transient": false,
 					"settings":
@@ -1058,11 +1333,11 @@
 						"translation.y": 393.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 12,
 					"file": "controllers/user.js",
 					"semi_transient": false,
 					"settings":
@@ -1088,11 +1363,69 @@
 						"translation.y": 210.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 13,
+					"file": "public/js/Nova pasta/teste.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4998,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4962,
+								4962
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1542.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "public/css/roulette.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 867,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								184,
+								184
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
 					"file": "views/index.hbs",
 					"semi_transient": false,
 					"settings":
@@ -1104,8 +1437,8 @@
 						"selection":
 						[
 							[
-								582,
-								582
+								2985,
+								2985
 							]
 						],
 						"settings":
@@ -1115,27 +1448,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 617.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 16,
 					"file": "views/layouts/main.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3081,
+						"buffer_size": 3201,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								657,
-								657
+								2246,
+								2246
 							]
 						],
 						"settings":
@@ -1148,11 +1481,41 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 17,
+					"file": "views/cups.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								681,
+								1002
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
 					"file": "controllers/auth.js",
 					"semi_transient": false,
 					"settings":
@@ -1164,8 +1527,8 @@
 						"selection":
 						[
 							[
-								394,
-								394
+								594,
+								594
 							]
 						],
 						"settings":
@@ -1175,14 +1538,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 136.0,
+						"translation.y": 214.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 19,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 19,
 					"file": "public/css/main.css",
 					"semi_transient": false,
 					"settings":
@@ -1208,24 +1571,24 @@
 						"translation.y": 3031.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "index.js",
+					"buffer": 20,
+					"file": "config.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5319,
+						"buffer_size": 610,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3929,
-								3929
+								242,
+								242
 							]
 						],
 						"settings":
@@ -1235,14 +1598,44 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1437.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 21,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 963,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								826,
+								789
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (NPM).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
 					"file": "controllers/utils.js",
 					"semi_transient": false,
 					"settings":
@@ -1268,7 +1661,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"file": "app.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								173,
+								129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
 					"type": "text"
 				}
 			]

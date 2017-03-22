@@ -1,3 +1,4 @@
+"use strict";
 var CASEW = 1050;
 var LAST_BET = 0;
 var MAX_BET = 0;
@@ -5,7 +6,7 @@ var HIDEG = false;
 var USER = "";
 var RANK = 0;
 var ROUND = 0;
-var HOST = "51.255.37.73:7828";
+var HOST = 'socket.csgodouble.gg';
 var SOCKET = null;
 var showbets = true;
 
@@ -22,7 +23,6 @@ function todongers(x) {
     }
     return x;
 }
-
 var snapX = 0;
 var R = 0.999;
 var S = 0.01;
@@ -37,14 +37,10 @@ var $CHATAREA = null;
 var SCROLL = true;
 var LANG = 1;
 var IGNORE = [];
-var sounds_rolling = new Audio('./sounds/rolling.wav');
+var sounds_rolling = new Audio('/sounds/rolling.wav');
 sounds_rolling.volume = 0.5;
-var sounds_tone = new Audio('./sounds/tone.wav');
+var sounds_tone = new Audio('/sounds/tone.wav');
 sounds_tone.volume = 0.75;
-
-$CASE = $("#case");
-$BANNER = $("#banner");
-$CHATAREA = $("#chatArea");
 
 function play_sound(x) {
     var conf = $("#settings_sounds").is(":checked");
@@ -71,12 +67,12 @@ function snapRender(x, wobble) {
             }
         }
         var max = 34;
-		var min = -34;
-		var w = Math.floor(wobble * (max - min + 1) + min);
-		var dist = index * 75 + 36 + w;
-		dist += 1125 * 5;
-		snapX = dist;
-		view(snapX);
+        var min = -34;
+        var w = Math.floor(wobble * (max - min + 1) + min);
+        var dist = index * 75 + 36 + w;
+        dist += 1125 * 5;
+        snapX = dist;
+        view(snapX);
     }
 }
 
@@ -92,36 +88,19 @@ function spin(m) {
         }
     }
     var max = 34;
-	var min = -34;
-	var w = Math.floor(m.wobble * (max - min + 1) + min);
-	var dist = index * 75 + 36 + w;
-	dist += 1125 * 5;
-	animStart = new Date().getTime();
-	vi = getVi(dist);
-	tf = getTf(vi);
-	isMoving = true;
-	setTimeout(function() {
-		finishRoll(m, tf);
-	}, tf);
-	render();
+    var min = -34;
+    var w = Math.floor(m.wobble * (max - min + 1) + min);
+    var dist = index * 75 + 36 + w;
+    dist += 1125 * 5;
+    animStart = new Date().getTime();
+    vi = getVi(dist);
+    tf = getTf(vi);
+    isMoving = true;
+    setTimeout(function() {
+        finishRoll(m, tf);
+    }, tf);
+    render();
 }
-
-spin({
-        type: "roll",
-        roll: "8",
-        rollid: "1",
-        nets: {
-            0: '{ lower: "10", upper: "100", swon: "5", samount: "10"}',
-            1: '{ lower: "10", upper: "100", swon: "5", samount: "10"}',
-            2: '{ lower: "10", upper: "100", swon: "5", samount: "10"}'
-        },
-        length: "250",
-        won: "8",
-        balance: "50",
-        wait: "9",
-        wobble: "17"
-    }
-);
 
 function d_mod(vi, t) {
     return vi * (Math.pow(R, t) - 1) / LOGR;
@@ -295,3 +274,440 @@ function addHist(roll, rollid) {
     }
 }
 
+function onMessage(msg) {
+    var m = msg;
+    if (m.type == "preroll") {
+        $("#counter").finish();
+        $("#banner").html("Confirming " + m.totalbets + "/" + (m.totalbets + m.inprog) + " total bets...");
+        $("#panel0-0 .total").countTo(m.sums[0]);
+        $("#panel1-7 .total").countTo(m.sums[1]);
+        $("#panel8-14 .total").countTo(m.sums[2]);
+        try {
+            tinysort("#panel1-7 .betlist>li", {
+                data: "amount",
+                order: "desc"
+            });
+        } catch (e) {}
+        try {
+            tinysort("#panel8-14 .betlist>li", {
+                data: "amount",
+                order: "desc"
+            });
+        } catch (e) {}
+        try {
+            tinysort("#panel0-0 .betlist>li", {
+                data: "amount",
+                order: "desc"
+            });
+        } catch (e) {}
+    } else if (m.type == "roll") {
+        $(".betButton").prop("disabled", true);
+        $("#counter").finish();
+        $("#banner").html("***ROLLING***");
+        ROUND = m.rollid;
+        showbets = false;
+        spin(m);
+    } else if (m.type == "chat") {
+        chat("player", m.msg, m.name, m.icon, m.user, m.rank, m.lang, m.hide);
+    } else if (m.type == "hello") {
+        cd(m.count);
+        USER = m.user;
+        RANK = m.rank;
+        $("#balance").countTo(m.balance);
+        var last = 0;
+        for (var i = 0; i < m.rolls.length; i++) {
+            addHist(m.rolls[i].roll, m.rolls[i].id);
+            last = m.rolls[i].roll;
+            ROUND = m.rolls[i].id + 1;
+        }
+        snapRender(last, m.last_wobble);
+        MAX_BET = m.maxbet;
+        chat("alert", "## Min bet: " + m.minbet + " credit");
+        chat("alert", "## Max bet: " + formatNum(MAX_BET) + " credits");
+        chat("alert", "## Max bets per roll: " + m.br);
+        chat("alert", "## Roll countdown: " + m.accept + " sec");
+        chat("alert", "## Chat: " + m.chat + " sec cooldown (" + 500000 + "+ total bet to write in chat)");
+    } else if (m.type == "bet") {
+        if (showbets) {
+            addBet(m.bet);
+            $("#panel0-0 .total").countTo(m.sums[0]);
+            $("#panel1-7 .total").countTo(m.sums[1]);
+            $("#panel8-14 .total").countTo(m.sums[2])
+        }
+    } else if (m.type == "betconfirm") {
+        $("#panel" + m.bet.lower + "-" + m.bet.upper + " .mytotal").countTo(m.bet.amount);
+        $("#balance").countTo(m.balance, {
+            "color": true
+        });
+        $(".betButton").prop("disabled", false);
+        chat("alert", "Bet #" + m.bet.betid + " confirmed " + m.mybr + "/" + m.br + " (" + (m.exec / 1000) + " sec) ");
+    } else if (m.type == "error") {
+        chat("error", m.error);
+        if (m.enable) {
+            $(".betButton").prop("disabled", false);
+        }
+    } else if (m.type == "alert") {
+        chat("alert", m.alert);
+        if (m.maxbet) {
+            MAX_BET = m.maxbet;
+        }
+        if (!isNaN(m.balance)) {
+            console.log("setting balance = %s", m.balance);
+            $("#balance").countTo(m.balance, {
+                "color": true
+            });
+        }
+    } else if (m.type == "logins") {
+        $("#isonline").html(m.count);
+    } else if (m.type == "balance") {
+        $("#balance").fadeOut(100).html(todongersb(m.balance)).fadeIn(100);
+    }
+}
+
+function addBet(bet) {
+    if (bet.amount > 999) {
+        var betid = bet.user + "-" + bet.lower;
+        var pid = "#panel" + bet.lower + "-" + bet.upper;
+        var $panel = $(pid);
+        $panel.find("#" + betid).remove();
+        var f = "<li class='list-group-item' id='{0}' data-amount='{1}'>";
+        f += "<div style='overflow: hidden;line-height:32px'>";
+        f += "<div class='pull-left'><img class='rounded' src='https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars{2}'> <b>{3}</b></div>";
+        f += "<div class='amount pull-right'><b>{4}</b></div>";
+        f += "</div></li>";
+        var $li = $(f.format(betid, bet.amount, bet.icon, bet.name, todongersb(bet.amount)));
+        $li.hide().prependTo($panel.find(".betlist")).slideDown("fast", function() {
+            snapRender();
+        });
+    }
+}
+
+function connect() {
+    if (!SOCKET) {
+        chat("italic", "Generating authentication token...");
+        $.ajax({
+            'url': "/scripts/getToken.php?v=" + (new Date()).getTime(),
+            success: function(data) {
+                if (data) {
+                    if (data == "nologin") {
+                        chat("italic", "Please, sign in through Steam to connect.");
+                    } else {
+                        chat("italic", "Connecting...");
+                        SOCKET = io(HOST, {
+                            secure: true
+                        });
+                        SOCKET.on('connect', function(msg) {
+                            chat("italic", "Connected!");
+                            SOCKET.emit('hash', data);
+                        });
+                        SOCKET.on('connect_error', function(msg) {
+                            chat("italic", "Conection lost...");
+                        });
+                        SOCKET.on('connect_timeout', function() {
+                            chat('error', "Conection lost...");
+                        });
+                        SOCKET.on('disconnect', function() {
+                            chat('error', 'Connection lost. Try refreshing the page several times.');
+                        });
+                        SOCKET.on('message', function(msg) {
+                            onMessage(msg);
+                        });
+                    }
+                }
+            }
+        });
+    } else {
+        console.log("Error: connection already exists.");
+    }
+}
+
+function emotes(str) {
+    var a = ["deIlluminati", "KappaRoss", "KappaPride", "BibleThump", "Kappa", "Keepo", "Kreygasm", "PJSalt", "PogChamp", "SMOrc", "CO", "CA", "Tb", "offFire", "Fire", "rip", "lovegreen", "heart", "FailFish", "Jaaman"];
+    for (var i = 0; i < a.length; i++) {
+        str = str.replace(new RegExp(a[i] + "( |$)", "g"), "<img src='/images/twitch/" + a[i] + ".png'> ");
+    }
+    return str;
+}
+
+function chat(x, msg, name, icon, steamid, rank, lang, hide) {
+    if (IGNORE.indexOf(String(steamid)) > -1) {
+        console.log("ignored:" + msg);
+        return;
+    }
+    if (lang == LANG || x == "italic" || x == "error" || x == "alert") {
+        msg = msg.replace(/(<|>)/g, '');
+        var toChat = "";
+        if (x == "italic") toChat = "<div class='chat-msg'><div><i>" + msg + "</i></div></div>";
+        else if (x == "error") toChat = "<div class='chat-msg'><div><b class='text-danger'>" + msg + "</b></div></div>";
+        else if (x == "alert") toChat = "<div class='chat-msg'><div><b class='text-success'>" + msg + "</b></div></div>";
+        else if (x == "player") {
+            msg = links(msg);
+            msg = emotes(msg);
+            var uclass = '',
+                extname = name;
+            if (rank == 100) uclass = 'chat-mod', extname = '[Owner] ' + name;
+            else if (rank == 1) uclass = 'chat-pmod', extname = '[Mod] ' + name;
+            else if (rank == -1) uclass = 'chat-streamer', extname = '[Streamer] ' + name;
+            else if (rank == -2) uclass = 'chat-vet', extname = '[Veteran] ' + name;
+            else if (rank == -3) uclass = 'chat-pro', extname = '[Pro] ' + name;
+            else if (rank == -4) uclass = 'chat-yt', extname = '[Youtuber] ' + name;
+            else if (rank == -5) uclass = 'chat-pmod', extname = '[Dev] ' + name;
+            if ($("#settings_shortnames").is(":checked")) extname = name;
+            toChat = '<div class="chat-msg"><div class="rank ' + uclass + '"><img class="chat-img rounded" data-steamid="' + steamid + '" data-name="' + extname + '" src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars' + icon + '">' + (hide ? '<b class="chat-link">' + extname + '</b>' : '<a class="chat-link" href="http://steamcommunity.com/profiles/' + steamid + '" target="_blank"><b>' + extname + '</b></a>') + ': ' + msg + '</div></div>';
+        }
+        $CHATAREA.append(toChat);
+        if (SCROLL) {
+            var curr = $CHATAREA.children().length;
+            if (curr > 75) {
+                var rem = curr - 75;
+                $CHATAREA.children().slice(0, rem).remove();
+            }
+            $CHATAREA.scrollTop($CHATAREA[0].scrollHeight);
+        }
+        if (SCROLL && !$(".side-icon[data-tab='1']").hasClass("active")) {
+            var curr = parseInt($("#newMsg").html()) || 0;
+            $("#newMsg").html(curr + 1);
+        }
+    }
+}
+$(document).ready(function() {
+    $CASE = $("#case");
+    $BANNER = $("#banner");
+    $CHATAREA = $("#chatArea");
+    connect();
+    if ($("#settings_dongers").is(":checked")) {
+        $("#dongers").html("$");
+    }
+    $("#lang").on("change", function() {
+        LANG = $(this).val();
+        chat("alert", "You moved to room: " + $(this).find("option:selected").text());
+    });
+    $("#scroll").on("change", function() {
+        SCROLL = !$(this).is(":checked");
+    });
+    $(window).resize(function() {
+        snapRender();
+    });
+    $("#chatForm").on("submit", function() {
+        var msg = $("#chatMessage").val();
+        if (msg) {
+            var res = null;
+            if (res = /^\/send ([0-9]*) ([0-9]*)/.exec(msg)) {
+                bootbox.confirm("You are going to send " + res[2] + " to the Steam ID " + res[1] + " - are you sure?", function(result) {
+                    if (result) {
+                        send({
+                            "type": "chat",
+                            "msg": msg,
+                            "lang": LANG
+                        });
+                        $("#chatMessage").val("");
+                    }
+                });
+            } else {
+                var hideme = $("#settings_hideme").is(":checked");
+                send({
+                    "type": "chat",
+                    "msg": msg,
+                    "lang": LANG,
+                    "hide": hideme,
+                });
+                $("#chatMessage").val("");
+            }
+        }
+        return false;
+    });
+    $(document).on("click", ".ball", function() {
+        var rollid = $(this).data("rollid");
+    });
+    $(".betButton").on("click", function() {
+        var lower = $(this).data("lower");
+        var upper = $(this).data("upper");
+        var amount = str2int($("#betAmount").val());
+        if ($("#settings_dongers").is(":checked")) {
+            amount = amount * 1000;
+        }
+        amount = Math.floor(amount);
+        var conf = $("#settings_confirm").is(":checked");
+        if (conf && amount > 10000) {
+            var pressed = false;
+            bootbox.confirm("Are you sure you want to bet " + formatNum(amount) + " credits?<br><br><i>You can disable this in settings.</i>", function(result) {
+                if (result && !pressed) {
+                    pressed = true;
+                    send({
+                        "type": "bet",
+                        "amount": amount,
+                        "lower": lower,
+                        "upper": upper,
+                        "round": ROUND
+                    });
+                    LAST_BET = amount;
+                    $(this).prop("disabled", true);
+                }
+            });
+        } else {
+            send({
+                "type": "bet",
+                "amount": amount,
+                "lower": lower,
+                "upper": upper,
+                "round": ROUND
+            });
+            LAST_BET = amount;
+            $(this).prop("disabled", true);
+        }
+        return false;
+    });
+    $(document).on("click", ".betshort", function() {
+        var bet_amount = str2int($("#betAmount").val());
+        var action = $(this).data("action");
+        if (action == "clear") {
+            bet_amount = 0;
+        } else if (action == "double") {
+            bet_amount *= 2;
+        } else if (action == "half") {
+            bet_amount /= 2;
+        } else if (action == "max") {
+            var MX = MAX_BET;
+            if ($("#settings_dongers").is(":checked")) {
+                MX = MAX_BET / 1000;
+            }
+            bet_amount = Math.min(str2int($("#balance").html()), MX);
+        } else if (action == "last") {
+            bet_amount = 0;
+        } else {
+            bet_amount += parseInt(action);
+        }
+        $("#betAmount").val(bet_amount);
+    });
+    $("#getbal").on("click", function() {
+        send({
+            "type": "balance"
+        });
+    });
+    $("button.close").on("click", function() {
+        $(this).parent().addClass("hidden");
+    });
+    $(document).on("contextmenu", ".chat-img", function(e) {
+        if (e.ctrlKey) return;
+        $("#contextMenu [data-act=1]").hide();
+        $("#contextMenu [data-act=2]").hide();
+        if (RANK == 100) {
+            $("#contextMenu [data-act=1]").show();
+            $("#contextMenu [data-act=2]").show();
+        } else if (RANK == 1) {
+            $("#contextMenu [data-act=1]").show();
+        }
+        e.preventDefault();
+        var steamid = $(this).data("steamid");
+        var name = $(this).data("name");
+        $("#contextMenu [data-act=0]").html(name);
+        var $menu = $("#contextMenu");
+        $menu.show().css({
+            position: "absolute",
+            left: getMenuPosition(e.clientX, 'width', 'scrollLeft'),
+            top: getMenuPosition(e.clientY, 'height', 'scrollTop')
+        }).off("click").on("click", "a", function(e) {
+            var act = $(this).data("act");
+            e.preventDefault();
+            $menu.hide();
+            if (act == 0) {
+                var curr = $("#chatMessage").val(steamid);
+            } else if (act == 1) {
+                var curr = $("#chatMessage").val("/mute " + steamid + " ");
+            } else if (act == 2) {
+                var curr = $("#chatMessage").val("/kick " + steamid + " ");
+            } else if (act == 3) {
+                var curr = $("#chatMessage").val("/send " + steamid + " ");
+            } else if (act == 4) {
+                IGNORE.push(String(steamid));
+                chat("alert", steamid + " Ignored.");
+            }
+            $("#chatMessage").focus();
+        });
+    });
+    $(document).on("click", function() {
+        $("#contextMenu").hide();
+    });
+    $(".side-icon").on("click", function(e) {
+        e.preventDefault();
+        var tab = $(this).data("tab");
+        if ($(this).hasClass("active")) {
+            $(".side-icon").removeClass("active");
+            $(".tab-group").addClass("hidden");
+            $("#mainpage").removeClass("col-sm-8");
+            $("#mainpage").addClass("col-sm-12");
+            $("#mainpage").css("padding-left", "60px");
+            $("#pullout").addClass("hidden");
+        } else {
+            $(".side-icon").removeClass("active");
+            $(".tab-group").addClass("hidden");
+            $(this).addClass("active");
+            $("#tab" + tab).removeClass("hidden");
+            $("#mainpage").removeClass("col-sm-12");
+            $("#mainpage").addClass("col-sm-8");
+            $("#mainpage").css("padding-left", "0");
+            $("#pullout").removeClass("hidden");
+            if (tab == 1) {
+                $("#newMsg").html("");
+            }
+        }
+        snapRender();
+        return false;
+    });
+    $(".smiles li img").on("click", function() {
+        $("#chatMessage").val($("#chatMessage").val() + $(this).data("smile") + " ")
+    });
+    $('.clearChat').on("click", function() {
+        $('#chatArea').html("<div><div><b class='text-success'>Chat cleared!</b></div></div>")
+    });
+    $(document).on("click", ".deleteMsg", function(e) {
+        var t = $(this).data("id");
+        send({
+            type: "delmsg",
+            id: t
+        })
+    });
+});
+
+function getAbscentPhrases(msg) {
+    var phrases = ["hello", 1, "simba"];
+    for (var i = 0; i < phrases.length; i++) {
+        if (msg.toLowerCase().indexOf(phrases[i]) + 1) {
+            return 1
+        }
+    }
+    return 0
+}
+
+function getMenuPosition(mouse, direction, scrollDir) {
+    var win = $(window)[direction](),
+        scroll = $(window)[scrollDir](),
+        menu = $("#contextMenu")[direction](),
+        position = mouse + scroll;
+    if (mouse + menu > win && menu < mouse)
+        position -= menu;
+    return position;
+}
+
+function str2int(s) {
+    s = s.replace(/,/g, "");
+    s = s.toLowerCase();
+    var i = parseFloat(s);
+    if (isNaN(i)) {
+        return 0;
+    } else if (s.charAt(s.length - 1) == "k") {
+        i *= 1000;
+    } else if (s.charAt(s.length - 1) == "m") {
+        i *= 1000000;
+    } else if (s.charAt(s.length - 1) == "b") {
+        i *= 1000000000;
+    }
+    return i;
+}
+
+function links(msg) {
+    return msg.replace(/(((http|ftp)s?:\/\/)?(([\w\-]+\.)+([a-z]{2,8})(:\d+)?((\/|\?)[^\s\(\)]+)?))/gi, function(whole, url, protocol, foo, link) {
+        protocol = protocol || 'http://';
+        return '<a href="' + protocol + link + '" target="_blank">' + url + '</a>';
+    });
+}

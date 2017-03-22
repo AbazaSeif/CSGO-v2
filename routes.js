@@ -40,6 +40,9 @@ module.exports = function() {
   // Cups Route
   App.Express.get('/cups', App.controllers.home.cups);
 
+  // Roulette Route
+  App.Express.get('/roulette', App.controllers.home.roulette);
+
   // 404 Route
   App.Express.get('*', App.controllers.utils.notFound);
 };

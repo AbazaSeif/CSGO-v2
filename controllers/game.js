@@ -52,7 +52,7 @@ class game {
     }
     debug(App.game.players);
     socket.emit('remove player', {'online': App.game.players});
-  }  
+  }
 
   search(identifier, socket) {
     let bets = {

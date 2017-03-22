@@ -1,0 +1,51 @@
+#mark {
+   width: .1875rem; 
+   height: 100%; 
+   background: white;
+   position: absolute;
+   left: 50%;
+}
+#case {
+    max-width: 1050px;
+    height: 75px;
+    background-image: url(/assets/cases2.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    position: relative;
+    margin: 0px auto;
+}
+#pointer {
+    width: 3px;
+    background: #ff0;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    height: 100%;
+}
+
+.ball {
+    color: white;
+    cursor: default;
+    border-radius: 45px;
+    border: 1px solid transparent;
+    width: 45px;
+    height: 45px;
+    background-color: #000;
+    font-size: 17px;
+    line-height: 45px;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+    margin: 1px;
+}
+.ball-1 {
+    background-color: #c9302c;
+}
+
+.ball-0 {
+    background-color: #449d44;
+}
+
+.ball-8 {
+    background: #383838;
+}

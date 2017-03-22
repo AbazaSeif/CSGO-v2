@@ -22,6 +22,10 @@ class home {
   cups(req, res) {
     res.render('cups');
   }
+
+  roulette(req, res) {
+    res.render('roulette');
+  }
 }
 
 module.exports = home;
