@@ -18,6 +18,7 @@ module.exports = function() {
     // On bet
     socket.on('bet', (data) => { App.controllers.rouletteGame.bet(data, socket); });
 
+
     // On search
     socket.on('search', (data) => { App.controllers.rouletteGame.search(data, socket); });
     socket.on('searchTotal', (data) => { App.controllers.rouletteGame.searchTotal(socket); });

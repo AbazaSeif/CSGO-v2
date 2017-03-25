@@ -146,13 +146,19 @@ class rouletteGame {
           }
 
           App.roulette.stats[data.color].bets += 1;
-          App.roulette.stats[data.color].total += data.amount;
+          App.roulette.stats[data.color].total += Number(data.amount);
           App.roulette.stats[data.color].betters.push({
             'identifier': data.identifier,
             'amount': Number(data.amount)
           });
 
+          /* Emit to all clients except the sender
           socket.broadcast.emit('new_bet', App.roulette.stats);
+          */
+
+          // Emit to all clients connected
+          App.io.emit('new_bet', App.roulette.stats);
+          
           socket.emit('betted', {'amount': data.amount, 'color': data.color, 'new_coins': new_coins});
         });
       });

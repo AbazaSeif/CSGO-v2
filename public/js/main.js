@@ -58,13 +58,6 @@ $(function() {
     }, 3000);
   });
 
-  socket.on('betted', function(data) {
-    my_bets[data.color].amount += Number(data.amount);
-    my_bets[data.color].bets += 1;
-
-    $('#balance').text('Coins: ' + data.new_coins);
-  });
-
   socket.on('rolled', function(data) {
     $('.luckyNumber').val(data.number);
     var time = moment(data.new_time).toDate();

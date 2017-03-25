@@ -47,6 +47,18 @@ function roulette() {
     }
   });
 
+  socket.on('new_bet', function(bets) {
+    if(bets.green.total > 0) {
+      $('#totalBets_green').text(bets.green.total);
+    }
+    if(bets.red.total > 0) {
+      $('#totalBets_red').text(bets.red.total);
+    }
+    if(bets.black.total > 0) {
+      $('#totalBets_black').text(bets.black.total);
+    }
+  });
+
   socket.on('totalFound', function(bets) {
     if(bets.green > 0) {
       $('#totalBets_green').text(bets.green);
