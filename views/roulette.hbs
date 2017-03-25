@@ -1,6 +1,6 @@
 <div class="row">
 
-  <div class="col-sm-8 main">
+  <div class="col-sm-9 main">
     <div class="alert alert-danger error" style='display: none;'>
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
       <strong>Error!</strong>
@@ -16,7 +16,7 @@
     <div class='time module'>
       <h3><span class='timeleft'>Time Remaining: 30 seconds. Waiting for a bet...</span></h3>
       <div class="progress progress-striped active" style='height: 30px !important;'>
-        <div class="timebar progress-bar progress-bar-danger" style="width: 100%;"></div>
+        <div id="counter" class="timebar progress-bar progress-bar-danger" style="width: 100%;"></div>
       </div>  
     </div>
 
@@ -24,17 +24,19 @@
 
     <div class="game module">
       <div class='row'>
-        <div>
+        <div class="text-center" style="margin-bottom:10px;">
           <div id="case" style="margin-bottom: 5px; background-position: -789px 0px;">
             <div id="pointer"></div>
           </div>
+
           <div class="well text-center" style="padding:5px;margin-bottom:5px">
             <div id="past"></div>
           </div>
+
           <div class="well" style="margin-bottom:5px">
             <div class="input-btn bet-buttons">
               <div class="form-group">
-                <span style="font-size:18px;font-weight:bold">Balance: <span id="dongers"></span><span id="balance">{{user.coins}}</span> <i style="cursor:pointer" class="fa fa-refresh noselect" id="getbal"></i>
+                <span style="font-size:18px;font-weight:bold">Coins: <span id="dongers"></span><span id="balance" class="users_coins">{{user.coins}}</span> <i style="cursor:pointer" class="fa fa-refresh noselect" id="getbal"></i>
                 </span>
               </div>
               <div class="form-group">
@@ -50,20 +52,66 @@
                   <button type="button" class="btn btn-default betshort" data-action="max">Max</button>
                 </div>
               </div>
-              <input type="text" class="form-control input-lg" placeholder="Bet amount..." id="betAmount">
+              <input type="text" class="form-control input-lg" placeholder="Bet amount..." id="bet_input">
             </div>
           </div>
         </div>
         <button id="rodar" class="btn btn-danger spin">Rodar</button>
+        <script src="js/spin.js"></script>
       </div>
-
+      
       <hr>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <button class="btn btn-danger bet_btn btn_red">1-7, Win 2x</button>
+          <div class="row bet_info">
+            <div class="col-sm-6">
+              <h5>Your bet:</h5>
+              <p id="bets_red">0</p>
+            </div>
+            <div class="col-sm-6">
+              <h5>Total bet:</h5>
+              <p id="totalBets_red">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-danger bet_btn btn_green">0, Win 14x</button>
+          <div class="row bet_info">
+            <div class="col-sm-6">
+              <h5>Your bet:</h5>
+              <p id="bets_green">0</p>
+            </div>
+            <div class="col-sm-6">
+              <h5>Total bet:</h5>
+              <p id="totalBets_green">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-danger bet_btn btn_black">8-14, Win 2x</button>
+          <div class="row bet_info">
+            <div class="col-sm-6">
+              <h5>Your bet:</h5>
+              <p id="bets_black">0</p>
+            </div>
+            <div class="col-sm-6">
+              <h5>Total bet:</h5>
+              <p id="totalBets_black">0</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <br>
-  </div>
-  
-  <div class="col-sm-1">
+
+    <div class='module history_module'>
+      <h3 style='margin-top: 0px; text-align: center;'>Previous Draws:</h3>
+      <div class='history'>
+      </div>
+    </div>
     <br>
   </div>
 
@@ -82,9 +130,14 @@
       <hr>
     </div>
 
-    <div action="" method="POST" class="form-inline" role="form">  
-      <input type="text" class="form-control chat_input" style='width: 100%;' placeholder="Message: Press Enter to Send" onclick="socket.emit('chat', {identifier: '{{user.identifier}}', username: '{{user.displayName}}', message: $('.chat_input').val() });">
-    </div>
+    <from action="" method="POST" class="form-inline" role="form">  
+      <div class="input-group">
+        <input type="text" class="form-control chat_input" style='width: 100%;' placeholder="Press Enter to Send" >
+        <span class="input-group-btn">
+          <button class="btn btn-danger chat_submit" type="button">Send</button>
+        </span>
+      </div>
+    </form>
   </div>
 </div>
 

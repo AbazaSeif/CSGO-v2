@@ -1,6 +1,6 @@
 var socket, color,
     my_bets = {
-      'blue': {
+      'black': {
         'amount': 0,
         'bets': 0
       },
@@ -14,15 +14,12 @@ var socket, color,
       }
     };
 
-$(function() {
-  scrollit();
-
-  moment.tz.setDefault('America/New_York');
-
+function roulette() {
   socket = io();
   socket.emit('search', $('.identifier').text());
+  socket.emit('searchTotal');
   
-  clickListeners();
+  clickListenersRoullete();
 
   socket.on('time', function(data) {
     var percentage = Number(data.time) / 30 * 100;
@@ -34,57 +31,49 @@ $(function() {
     my_bets[data.color].amount += Number(data.amount);
     my_bets[data.color].bets += 1;
 
-    $('.user_coins').text('Coins: ' + data.new_coins);
-    $('#bets_' + data.color).text("You're bet: " + my_bets[data.color].amount + ' coins');
+    $('#balance').text('Coins: ' + data.new_coins);
+    $('#bets_' + data.color).text(my_bets[data.color].amount);
   });
 
   socket.on('found', function(bets) {
     if(bets.green > 0) {
-      $('#bets_green').text("You're bet: " + bets.green + ' coins');
+      $('#bets_green').text(bets.green);
     }
     if(bets.red > 0) {
-      $('#bets_red').text("You're bet: " + bets.red + ' coins');
+      $('#bets_red').text(bets.red);
     }
-    if(bets.blue > 0) {
-      $('#bets_blue').text("You're bet: " + bets.blue + ' coins');
+    if(bets.black > 0) {
+      $('#bets_black').text(bets.black);
     }
   });
-});
 
-function scrollit() {
-  var $target = $('#messages'); 
-  $target.scrollTop(500000);
-}
-
-function showBet(hex) {
-  if(hex == '#20CF1D') {
-    color = 'green';
-  } else if(hex == '#E2393E') {
-    color = 'red';
-  } else if (hex == '#F08B00'){
-    color = 'gold';
-  } else {
-    color = 'blue';
-  }
-
-  $('.bet_form').slideDown('fast');
-  $('.bet_form').css('display', 'block');
-  $('.bet_submit').css('background', hex);
+  socket.on('totalFound', function(bets) {
+    if(bets.green > 0) {
+      $('#totalBets_green').text(bets.green);
+    }
+    if(bets.red > 0) {
+      $('#totalBets_red').text(bets.red);
+    }
+    if(bets.black > 0) {
+      $('#totalBets_black').text(bets.black);
+    }
+  });
 }
 
 function bet() {
   socket.emit('bet', {
     'identifier': $('.identifier').text(),
-    'amount': $('.bet_input').val(),
+    'amount': $('#bet_input').val(),
     'color': color
   });
 }
 
-function spinB() {
+function spinBtn() {
   rollN = Math.round(Math.random() * 14);
+  
   spin({
       type: "roll",
-      roll: "0",
+      roll: rollN,
       rollid: "1",
       nets: {
         0: '{ lower: "10", upper: "100", swon: "5", samount: "10"}',
@@ -93,33 +82,20 @@ function spinB() {
       },
       length: "250",
       won: "113545",
-      balance: "50",
+      balance: "500",
       wait: "9",
       wobble: "17"
     }
   );
 }
 
-function clickListeners() {
-  $('.green_cup').click(function() {
-    showBet("#20CF1D");
-  });
-  $('.red_cup').click(function() {
-    showBet("#E2393E");
-  });
-  $('.blue_cup').click(function() {
-    showBet("#2E7CD3");
-  });
-  $('.gold_bet').click(function() {
-    showBet("#F08B00");
-  });
-
+function clickListenersRoullete() {
   $('.bet_submit').click(function() {
     bet();
   })
 
   $('.spin').click(function() {
-    spinB();
+    spinBtn();
   });
 
   $('.betshort').click(function() {
@@ -129,5 +105,18 @@ function clickListeners() {
       $(this).data("clicked", true);
       alert("Clicked this cell for the first time");
     }
+  });
+
+  $('.btn_red').click(function() {
+    color = 'red';
+    bet();
+  });
+  $('.btn_green').click(function() {
+    color = 'green';
+    bet();
+  });
+  $('.btn_black').click(function() {
+    color = 'black';
+    bet();
   });
 }

@@ -1,6 +1,6 @@
 <div class="row">
 
-  <div class="col-sm-8 main">
+  <div class="col-sm-9 main">
     <div class="alert alert-danger error" style='display: none;'>
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
       <strong>Error!</strong>
@@ -72,10 +72,6 @@
     <br>
   </div>
   
-  <div class="col-sm-1">
-    <br>
-  </div>
-
   <div class='col-sm-3 module chat_module'>
     <h4 style='margin: 0px; text-align: center; padding-top: 3px;'>
       <b style='color: #2ecc71'>Users Online:</b> <span class='online'>30</span>
@@ -91,9 +87,14 @@
       <hr>
     </div>
 
-    <div action="" method="POST" class="form-inline" role="form">  
-      <input type="text" class="form-control chat_input" style='width: 100%;' placeholder="Message: Press Enter to Send" onclick="socket.emit('chat', {identifier: '{{user.identifier}}', username: '{{user.displayName}}', message: $('.chat_input').val() });">
-    </div>
+    <from action="" method="POST" class="form-inline" role="form">  
+      <div class="input-group">
+        <input type="text" class="form-control chat_input" style='width: 100%;' placeholder="Press Enter to Send" >
+        <span class="input-group-btn">
+          <button class="btn btn-danger chat_submit" type="button">Send</button>
+        </span>
+      </div>
+    </form>
   </div>
 </div>
 

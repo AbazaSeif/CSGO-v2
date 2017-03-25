@@ -288,3 +288,39 @@ input {
   color: #E6E6E6 !important;
   background: #424242 !important;
 }
+
+.bet_btn {
+  border: none;
+}
+
+.btn_red {
+  background: #C9302C;
+  width: 100%;
+}
+
+.btn_red:hover {
+  background: #a02623;
+}
+
+.btn_green {
+  background: #449D44;
+  width: 100%;
+}
+
+.btn_green:hover {
+  background: #367d36;
+}
+
+.btn_black {
+  background: #444444;
+  width: 100%;
+}
+
+.btn_black:hover {
+  background: #363636;
+}
+
+.bet_info {
+  border: 1px solid #464545;
+  margin-top: 3vh;
+}

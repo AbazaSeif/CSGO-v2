@@ -15,7 +15,7 @@ App.roulette.time = 30;
 App.roulette.started = false;
 
 App.roulette.stats = {};
-App.roulette.stats.blue = {
+App.roulette.stats.black = {
   'betters': [],
   'bets': 0,
   'total': 0
@@ -43,13 +43,13 @@ class rouletteGame {
     let bets = {
       'green': 0,
       'red': 0,
-      'blue': 0
+      'black': 0
     };
 
     if(App.roulette.state == 'betting') {
-      App.roulette.stats.blue.betters.forEach(function(bet) {
+      App.roulette.stats.black.betters.forEach(function(bet) {
         if(bet.identifier == identifier) {
-          bets.blue += bet.amount;
+          bets.black += bet.amount;
         }
       });
       App.roulette.stats.red.betters.forEach(function(bet) {
@@ -66,25 +66,45 @@ class rouletteGame {
     }
   }
 
+  searchTotal(socket) {
+    let bets = {
+      'green': 0,
+      'red': 0,
+      'black': 0
+    };
+
+    if(App.roulette.state == 'betting') {
+      App.roulette.stats.black.betters.forEach(function(bet) {
+        bets.black += bet.amount;
+      });
+      App.roulette.stats.red.betters.forEach(function(bet) {
+        bets.red += bet.amount;
+      });
+      App.roulette.stats.green.betters.forEach(function(bet) {
+        bets.green += bet.amount;
+      });
+      socket.emit('totalFound', bets);
+    }
+  }
+
   start() {
     setInterval(() => {
-      App.game.time = App.game.time - 1;
+      App.roulette.time = App.roulette.time - 1;
       this.timeEmit();
-      this.timeR();
     }, 1000);
   }
 
   timeEmit() {
     App.io.emit('time', {
-      'state': App.game.state,
-      'time': App.game.time
+      'state': App.roulette.state,
+      'time': App.roulette.time
     });
   }
 
   bet(data, socket) {
     let self = this;
 
-    if(App.game.state != 'betting') {
+    if(App.roulette.state != 'betting') {
       socket.emit('err', {'msg': 'You cannot bet at the moment as there is no round going on.'});
       return;
     } 
@@ -96,7 +116,7 @@ class rouletteGame {
       socket.emit('err', {'msg': 'You cannot bet less than 1 coin!'});
       return;
     } 
-    if(['red', 'green', 'blue', 'gold'].indexOf(data.color) == -1) {
+    if(['red', 'green', 'black', 'gold'].indexOf(data.color) == -1) {
       socket.emit('err', {'msg': 'Please choose a cup to bet on.'});
       return;
     }
@@ -110,6 +130,7 @@ class rouletteGame {
         } 
         if(Number(data.amount) > Number(docs[0].coins)) {
           socket.emit('err', {'msg': "You don't have enough coins."});
+          return;
         }
         let new_coins = Number(docs[0].coins) - Number(data.amount);
         App.db.users.update({
@@ -119,19 +140,19 @@ class rouletteGame {
             'coins': new_coins
           }
         }, function(err) {
-          if(!App.game.started) {
-            App.game.started = true;
+          if(!App.roulette.started) {
+            App.roulette.started = true;
             self.start();
           }
 
-          App.game.stats[data.color].bets += 1;
-          App.game.stats[data.color].total += data.amount;
-          App.game.stats[data.color].betters.push({
+          App.roulette.stats[data.color].bets += 1;
+          App.roulette.stats[data.color].total += data.amount;
+          App.roulette.stats[data.color].betters.push({
             'identifier': data.identifier,
             'amount': Number(data.amount)
           });
 
-          socket.broadcast.emit('new_bet', App.game.stats);
+          socket.broadcast.emit('new_bet', App.roulette.stats);
           socket.emit('betted', {'amount': data.amount, 'color': data.color, 'new_coins': new_coins});
         });
       });

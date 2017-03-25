@@ -26,6 +26,10 @@ class home {
   roulette(req, res) {
     res.render('roulette');
   }
+
+  error(req, res) {
+    res.render('404');
+  }
 }
 
 module.exports = home;

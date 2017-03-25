@@ -33,14 +33,18 @@ var isMoving = false;
 var LOGR = Math.log(R);
 var $CASE = null;
 var $BANNER = null;
+var $CHATAREA = null;
+var SCROLL = true;
+var LANG = 1;
 var IGNORE = [];
-var sounds_rolling = new Audio('./sounds/rolling.wav');
+var sounds_rolling = new Audio('./assets/sounds/rolling.wav');
 sounds_rolling.volume = 0.5;
-var sounds_tone = new Audio('./sounds/tone.wav');
+var sounds_tone = new Audio('./assets/sounds/tone.wav');
 sounds_tone.volume = 0.75;
 
 $CASE = $("#case");
 $BANNER = $(".timeleft");
+$CHATAREA = $("#chatArea");
 
 function play_sound(x) {
     var conf = $("#settings_sounds").is(":checked");
@@ -101,23 +105,6 @@ function spin(m) {
 	}, tf);
 	render();
 }
-
-spin({
-        type: "roll",
-        roll: "8",
-        rollid: "1",
-        nets: {
-            0: '{ lower: "10", upper: "100", swon: "5", samount: "10"}',
-            1: '{ lower: "10", upper: "100", swon: "5", samount: "10"}',
-            2: '{ lower: "10", upper: "100", swon: "5", samount: "10"}'
-        },
-        length: "250",
-        won: "8",
-        balance: "50",
-        wait: "9",
-        wobble: "17"
-    }
-);
 
 function d_mod(vi, t) {
     return vi * (Math.pow(R, t) - 1) / LOGR;
@@ -209,8 +196,8 @@ jQuery.fn.extend({
 });
 
 function cd(ms, cb) {
-    $(".timebar").finish().css("width", "100%");
-    $(".timebar").animate({
+    $("#counter").finish().css("width", "100%");
+    $("#counter").animate({
         width: "0%"
     }, {
         "duration": ms * 1000,
@@ -262,6 +249,7 @@ function finishRoll(m, tf) {
             });
         }
     }
+    
     if (m.balance != null) {
         $("#balance").countTo(m.balance, {
             "color": true

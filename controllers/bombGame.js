@@ -19,7 +19,6 @@ class bombGame {
     App.controllers.user.find(data.identifier)
       .then(function(docs) {
         if(!docs[0]) {
-          debug('lil error');
           return;
         }
         socket.emit('updateTime', {'time': docs[0].previousRoll});

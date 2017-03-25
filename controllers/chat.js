@@ -27,12 +27,15 @@ class chat {
           return;
         }
 
-        App.io.emit('message', {
-          username: data.username,
-          message: data.message
-        });
-        debug(data.message);
-        debug(data.username);
+        if((data.message.length !== 0 || data.message !== "") && data.message.replace(/\s/g, '').length !== 0) {
+          App.io.emit('message', {
+            username: data.username,
+            message: data.message
+          });
+
+          debug(data.username);
+          debug(data.message);
+        }
       });
   }
 

@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"bet_i",
+				"bet_input\t(roulette.hbs)"
+			],
+			[
+				"btn",
+				"btn_red\t(roulette.hbs)"
+			],
+			[
+				"total",
+				"totalFound\t(rouletteGame.js)"
+			],
+			[
+				"spin",
+				"spinBtn"
+			],
+			[
+				"bet_",
+				"bet_green"
+			],
+			[
+				"d",
+				"div"
+			],
+			[
+				"di",
+				"div"
+			],
+			[
+				"roule",
+				"rouletteGame\t(sockets.js)"
+			],
+			[
+				"snap",
+				"snapRender"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
 				"rou",
 				"roulette\t(home.js)"
 			],
@@ -100,10 +140,6 @@
 				"waitTime"
 			],
 			[
-				"d",
-				"docs"
-			],
-			[
 				"up",
 				"updateTime\t(main.js)"
 			],
@@ -148,10 +184,6 @@
 				"border"
 			],
 			[
-				"di",
-				"display"
-			],
-			[
 				"ma",
 				"margin-top"
 			],
@@ -170,10 +202,6 @@
 			[
 				"game",
 				"gamestate"
-			],
-			[
-				"con",
-				"controllers\t(routes.js)"
 			],
 			[
 				"socket",
@@ -448,10 +476,10 @@
 	"buffers":
 	[
 		{
-			"file": "routes.js",
+			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 1154,
+				"buffer_size": 5640,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -460,7 +488,7 @@
 			"file": "controllers/home.js",
 			"settings":
 			{
-				"buffer_size": 374,
+				"buffer_size": 422,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -469,16 +497,7 @@
 			"file": "sockets.js",
 			"settings":
 			{
-				"buffer_size": 994,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "controllers/bombGame.js",
-			"settings":
-			{
-				"buffer_size": 2258,
+				"buffer_size": 1105,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -487,7 +506,7 @@
 			"file": "controllers/game.js",
 			"settings":
 			{
-				"buffer_size": 5588,
+				"buffer_size": 5542,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -496,7 +515,7 @@
 			"file": "controllers/rouletteGame.js",
 			"settings":
 			{
-				"buffer_size": 3288,
+				"buffer_size": 3826,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -505,7 +524,7 @@
 			"file": "public/js/spin.js",
 			"settings":
 			{
-				"buffer_size": 7285,
+				"buffer_size": 6959,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -514,7 +533,7 @@
 			"file": "views/roulette.hbs",
 			"settings":
 			{
-				"buffer_size": 4273,
+				"buffer_size": 5922,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -523,96 +542,7 @@
 			"file": "public/js/roulette.js",
 			"settings":
 			{
-				"buffer_size": 2917,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.js",
-			"settings":
-			{
-				"buffer_size": 5474,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "controllers/chat.js",
-			"settings":
-			{
-				"buffer_size": 653,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/js/main.js",
-			"settings":
-			{
-				"buffer_size": 4221,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "controllers/user.js",
-			"settings":
-			{
-				"buffer_size": 1346,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/js/Nova pasta/teste.html",
-			"settings":
-			{
-				"buffer_size": 4998,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/css/roulette.css",
-			"settings":
-			{
-				"buffer_size": 867,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/index.hbs",
-			"settings":
-			{
-				"buffer_size": 4674,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/layouts/main.hbs",
-			"settings":
-			{
-				"buffer_size": 3201,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/cups.hbs",
-			"settings":
-			{
-				"buffer_size": 4751,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "controllers/auth.js",
-			"settings":
-			{
-				"buffer_size": 1507,
+				"buffer_size": 2579,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -621,7 +551,52 @@
 			"file": "public/css/main.css",
 			"settings":
 			{
-				"buffer_size": 3953,
+				"buffer_size": 4339,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/js/main.js",
+			"settings":
+			{
+				"buffer_size": 4668,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/chat.js",
+			"settings":
+			{
+				"buffer_size": 789,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/index.hbs",
+			"settings":
+			{
+				"buffer_size": 4671,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/layouts/main.hbs",
+			"settings":
+			{
+				"buffer_size": 3350,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/cups.hbs",
+			"settings":
+			{
+				"buffer_size": 4915,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -631,33 +606,6 @@
 			"settings":
 			{
 				"buffer_size": 610,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 963,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "controllers/utils.js",
-			"settings":
-			{
-				"buffer_size": 794,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app.json",
-			"settings":
-			{
-				"buffer_size": 249,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -735,16 +683,31 @@
 	},
 	"expanded_folders":
 	[
-		"/E/CS/Node",
-		"/E/CS/Node/controllers",
-		"/E/CS/Node/public",
-		"/E/CS/Node/public/css",
-		"/E/CS/Node/public/js",
-		"/E/CS/Node/views",
-		"/E/CS/Node/views/layouts"
+		"/L/CS/Node",
+		"/L/CS/Node/controllers",
+		"/L/CS/Node/public",
+		"/L/CS/Node/public/css",
+		"/L/CS/Node/public/js",
+		"/L/CS/Node/public/js/Nova pasta",
+		"/L/CS/Node/public/js/Nova pasta/js",
+		"/L/CS/Node/public/js/Nova pasta/sounds",
+		"/L/CS/Node/views"
 	],
 	"file_history":
 	[
+		"/L/CS/Node/controllers/trade.js",
+		"/L/CS/Node/routes.js",
+		"/L/CS/Node/controllers/bombGame.js",
+		"/L/CS/Node/public/js/Nova pasta/js/spin.js",
+		"/L/CS/Node/public/js/Nova pasta/teste.html",
+		"/L/CS/Node/views/rouletteBasic.hbs",
+		"/L/CS/Node/app.json",
+		"/L/CS/Node/package.json",
+		"/L/CS/Node/controllers/utils.js",
+		"/L/CS/Node/controllers/user.js",
+		"/L/CS/Node/controllers/chat.js",
+		"/L/CS/Node/public/css/roulette.css",
+		"/L/CS/Node/controllers/auth.js",
 		"/E/CS/Node/public/js/Nova pasta/js/spin.js",
 		"/E/CS/Node/public/js/Nova pasta/spin.js",
 		"/E/CS/Node/public/js/Nova pasta/rotate.js",
@@ -857,6 +820,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"you're",
+			"betted",
+			"blue",
+			"new_bet",
+			"gold",
+			"blue",
+			";",
+			"; width: 100%;",
+			"danger",
+			"btn-danger",
+			" bet_submit",
+			"btn",
+			"showBet",
+			"stat",
+			"bombGame",
+			"game",
+			"BANNER",
+			".timebar",
+			"my",
+			"snapRender",
+			"isMoving",
+			"requestAnimationFrame",
+			"balance",
+			"chat",
+			">\n",
 			"game",
 			"bomb",
 			"game",
@@ -975,24 +963,24 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "routes.js",
+					"file": "index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1154,
+						"buffer_size": 5640,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1045,
-								1045
+								4455,
+								4455
 							]
 						],
 						"settings":
@@ -1002,10 +990,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1330.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1014,43 +1002,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 374,
+						"buffer_size": 422,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								304,
-								304
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 18,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sockets.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 994,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								559,
-								559
+								349,
+								349
 							]
 						],
 						"settings":
@@ -1063,24 +1023,264 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "controllers/bombGame.js",
+					"buffer": 2,
+					"file": "sockets.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2258,
+						"buffer_size": 1105,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								46,
-								46
+								542,
+								552
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "controllers/game.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5542,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1779,
+								1779
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1043.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "controllers/rouletteGame.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								681,
+								681
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 272.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/js/spin.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6959,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1772,
+								1772
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 683.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/roulette.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5922,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4117,
+								4117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 743.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "public/js/roulette.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2579,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								768,
+								768
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 289.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4339,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4276,
+								4276
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3548.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "public/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1995,
+								1995
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 780.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "controllers/chat.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 789,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								451,
+								451
 							]
 						],
 						"settings":
@@ -1097,323 +1297,25 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "controllers/game.js",
+					"buffer": 11,
+					"file": "views/index.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5588,
+						"buffer_size": 4671,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2399,
-								2399
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1144.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "controllers/rouletteGame.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3288,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								873,
-								873
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 520.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/js/spin.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7285,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								690,
-								690
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 616.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "views/roulette.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4273,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1955,
-								1955
+								41,
+								41
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 305.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "public/js/roulette.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2917,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2909,
-								2909
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1109.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5474,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								825,
-								825
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "controllers/chat.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 653,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								404,
-								404
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "public/js/main.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4221,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1448,
-								1448
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 393.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "controllers/user.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1346,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1151,
-								1151
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 210.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "public/js/Nova pasta/teste.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4998,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4962,
-								4962
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1542.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "public/css/roulette.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 867,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								184,
-								184
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1425,50 +1327,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 15,
-					"file": "views/index.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4674,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2985,
-								2985
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 617.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
+					"buffer": 12,
 					"file": "views/layouts/main.hbs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3201,
+						"buffer_size": 3350,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2246,
-								2246
+								2410,
+								2410
 							]
 						],
 						"settings":
@@ -1478,104 +1350,44 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "views/cups.hbs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4751,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								681,
-								1002
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "controllers/auth.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1507,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								594,
-								594
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 214.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 19,
-					"type": "text"
-				},
-				{
-					"buffer": 19,
-					"file": "public/css/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3953,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3653,
-								3658
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3031.0,
+						"translation.y": 431.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 13,
+					"file": "views/cups.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								41,
+								41
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/grammars/Handlebars.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 78.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
 					"file": "config.js",
 					"semi_transient": false,
 					"settings":
@@ -1601,95 +1413,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
-					"type": "text"
-				},
-				{
-					"buffer": 21,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 963,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								826,
-								789
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (NPM).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 21,
-					"type": "text"
-				},
-				{
-					"buffer": 22,
-					"file": "controllers/utils.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 794,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								434,
-								434
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 23,
-					"type": "text"
-				},
-				{
-					"buffer": 23,
-					"file": "app.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 249,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								173,
-								129
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 22,
+					"stack_index": 14,
 					"type": "text"
 				}
 			]

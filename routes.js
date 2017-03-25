@@ -43,6 +43,9 @@ module.exports = function() {
   // Roulette Route
   App.Express.get('/roulette', App.controllers.home.roulette);
 
+  // Roulette Route
+  App.Express.get('/crash', App.controllers.home.error);
+
   // 404 Route
   App.Express.get('*', App.controllers.utils.notFound);
 };

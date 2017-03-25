@@ -54,38 +54,10 @@ class game {
     socket.emit('remove player', {'online': App.game.players});
   }
 
-  search(identifier, socket) {
-    let bets = {
-      'green': 0,
-      'red': 0,
-      'blue': 0
-    };
-
-    if(App.game.state == 'betting') {
-      App.game.stats.blue.betters.forEach(function(bet) {
-        if(bet.identifier == identifier) {
-          bets.blue += bet.amount;
-        }
-      });
-      App.game.stats.red.betters.forEach(function(bet) {
-        if(bet.identifier == identifier) {
-          bets.red += bet.amount;
-        }
-      });
-      App.game.stats.green.betters.forEach(function(bet) {
-        if(bet.identifier == identifier) {
-          bets.green += bet.amount;
-        }
-      });
-      socket.emit('found', bets);
-    }
-  }
-
   start() {
     setInterval(() => {
       App.game.time = App.game.time - 1;
       this.timeEmit();
-      this.timeR();
     }, 1000);
   }
 
@@ -93,7 +65,6 @@ class game {
     App.controllers.user.find(data.identifier)
       .then(function(docs) {
         if(!docs[0]) {
-          debug('lil error');
           return;
         }
         socket.emit('updateTime', {'time': docs[0].previousRoll});
@@ -156,7 +127,7 @@ class game {
       });
   }
 
-  bet(data, socket) {
+  /*bet(data, socket) {
     let self = this;
 
     if(App.game.state != 'betting') {
@@ -210,7 +181,7 @@ class game {
           socket.emit('betted', {'amount': data.amount, 'color': data.color, 'new_coins': new_coins});
         });
       });
-  }
+  }*/
 }
 
 module.exports = game;

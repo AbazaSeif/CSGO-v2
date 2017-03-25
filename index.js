@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 global.App = {};
 
 // TODO: put this in config.
-process.env.DEBUG = 'index, routes, auth_controller, home_controller, utils_controller, user_controller, trade_controller, sockets, chat_controller, game_controller, bombGame_controller';
+process.env.DEBUG = 'index, routes, auth_controller, home_controller, utils_controller, user_controller, trade_controller, sockets, chat_controller, game_controller, bombGame_controller, rouletteGame_controller';
 
 var debug = require('debug')('index'),
     expressHbs = require('express-handlebars');
@@ -143,6 +143,9 @@ App.controllers.game = new App.controllers.game();
 
 App.controllers.bombGame = require('./controllers/bombGame.js');
 App.controllers.bombGame = new App.controllers.bombGame();
+
+App.controllers.rouletteGame = require('./controllers/rouletteGame.js');
+App.controllers.rouletteGame = new App.controllers.rouletteGame();
 
 App.passport.serializeUser(function(user, done) {
   done(null, user);
