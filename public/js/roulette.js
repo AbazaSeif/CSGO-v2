@@ -59,6 +59,10 @@ function roulette() {
     }
   });
 
+  socket.on('my_bet', function(bet) {
+    addBet(bet);
+  });
+
   socket.on('totalFound', function(bets) {
     if(bets.green > 0) {
       $('#totalBets_green').text(bets.green);
@@ -72,9 +76,31 @@ function roulette() {
   });
 }
 
+function addBet(bet) {
+  if (bet.amount > 0) {
+    var betid = bet.id + "-" + bet.amount;
+    //var pid = "#panel" + bet.lower + "-" + bet.upper;
+    var pid = "#panel-" + bet.color;
+    var $panel = $(pid);
+    //$panel.find("#" + betid).remove();
+    var f = "<div class='bet' id='{0}' data-amount='{1}'>";
+    f += "<img src='{2}'>";
+    f += "<div class='username user'>{3}</div>";
+    f += "<div class='amount'>{4}</div>";
+    f += "</div>";
+    var $bet_list = $(f.format(bet.id, bet.amount, bet.avatar, bet.username, bet.amount));
+    $bet_list.hide().prependTo($panel).slideDown("fast", function() {
+        snapRender();
+    });
+  }
+}
+
 function bet() {
   socket.emit('bet', {
-    'identifier': $('.identifier').text(),
+    'identifier': $('#identifier').text(),
+    'id': $('#id').text(),
+    'username': $('#username').text(),
+    'avatar': $('#avatar').text(),
     'amount': $('#bet_input').val(),
     'color': color
   });

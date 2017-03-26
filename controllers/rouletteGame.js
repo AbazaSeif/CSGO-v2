@@ -152,12 +152,23 @@ class rouletteGame {
             'amount': Number(data.amount)
           });
 
+          let mybets = {
+            'identifier': data.identifier,
+            'id': data.id,
+            'username': data.username,
+            'avatar': data.avatar,
+            'color': data.color,
+            'amount': Number(data.amount)
+          };
+
           /* Emit to all clients except the sender
           socket.broadcast.emit('new_bet', App.roulette.stats);
           */
 
           // Emit to all clients connected
           App.io.emit('new_bet', App.roulette.stats);
+          App.io.emit('my_bet', mybets);
+          debug(App.roulette.stats);
           
           socket.emit('betted', {'amount': data.amount, 'color': data.color, 'new_coins': new_coins});
         });

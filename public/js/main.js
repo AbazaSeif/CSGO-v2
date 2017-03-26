@@ -14,6 +14,13 @@ var socket, color,
       }
     };
 
+String.prototype.format = function() {
+  var args = arguments;
+  return this.replace(/{(\d+)}/g, function(match, number) {
+    return typeof args[number] != 'undefined' ? args[number] : match;
+  });
+}
+
 $(function() {
   scrollit();
 
@@ -103,7 +110,7 @@ function updateTime() {
 
 function roll() {
   socket.emit('roll', {
-    'identifier': $('.identifier').text()
+    'identifier': $('#identifier').text()
   });
 }
 
@@ -130,12 +137,12 @@ function clickListeners() {
   });
 
   $('.chat_submit').click(function() {
-    socket.emit('chat', { identifier: $('.identifier').text(), username: $('.username').text(), message: $('.chat_input').val() });
+    socket.emit('chat', { identifier: $('#identifier').text(), username: $('#username').text(), message: $('.chat_input').val() });
   });
 
   $('.chat_input').keypress(function(e){
     if(e.which == 13) {
-      socket.emit('chat', { identifier: $('.identifier').text(), username: $('.username').text(), message: $('.chat_input').val() });
+      socket.emit('chat', { identifier: $('#identifier').text(), username: $('#username').text(), message: $('.chat_input').val() });
     }
   });
 }

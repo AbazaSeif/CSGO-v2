@@ -295,7 +295,7 @@ input {
 
 .btn_red {
   background: #C9302C;
-  width: 100%;
+  width: 16.611em;
 }
 
 .btn_red:hover {
@@ -304,7 +304,7 @@ input {
 
 .btn_green {
   background: #449D44;
-  width: 100%;
+  width: 16.611em;
 }
 
 .btn_green:hover {
@@ -313,7 +313,7 @@ input {
 
 .btn_black {
   background: #444444;
-  width: 100%;
+  width: 16.611em;
 }
 
 .btn_black:hover {
@@ -323,4 +323,51 @@ input {
 .bet_info {
   border: 1px solid #464545;
   margin-top: 3vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.betting-panel {
+  padding: 0;
+}
+
+.bet-list {
+  width: 100%;
+}
+.bet-list .bet {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 0.75em;
+  border: 1px solid #464545;
+  border-top: none;
+}
+@media only screen and(max-width: 1600px) {
+  .bet-list .bet {
+    font-size: 0.65em;
+  }
+}
+.bet-list .bet img {
+  height: 28px;
+  width: 28px;
+  padding: 0;
+}
+@media only screen and(max-width: 1600px) {
+  .bet-list .bet img {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+  }
+}
+.bet-list .bet .username {
+  margin-left: 15px;
+  max-width: calc(100 % -80px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bet-list .bet .amount {
+  margin-left: auto;
 }

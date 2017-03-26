@@ -63,7 +63,7 @@
       <hr>
 
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4 betting-panel">
           <button class="btn btn-danger bet_btn btn_red">1-7, Win 2x</button>
           <div class="row bet_info">
             <div class="col-sm-6">
@@ -75,8 +75,11 @@
               <p id="totalBets_red">0</p>
             </div>
           </div>
+
+          <div class="bet-list" id="panel-red"></div>
         </div>
-        <div class="col-sm-4">
+
+        <div class="col-sm-4 betting-panel">
           <button class="btn btn-danger bet_btn btn_green">0, Win 14x</button>
           <div class="row bet_info">
             <div class="col-sm-6">
@@ -88,8 +91,11 @@
               <p id="totalBets_green">0</p>
             </div>
           </div>
+
+          <div class="bet-list" id="panel-green"></div>
         </div>
-        <div class="col-sm-4">
+
+        <div class="col-sm-4 betting-panel">
           <button class="btn btn-danger bet_btn btn_black">8-14, Win 2x</button>
           <div class="row bet_info">
             <div class="col-sm-6">
@@ -101,6 +107,8 @@
               <p id="totalBets_black">0</p>
             </div>
           </div>
+
+          <div class="bet-list" id="panel-black"></div>
         </div>
       </div>
     </div>
@@ -141,7 +149,9 @@
   </div>
 </div>
 
-<div class='identifier' style='display: none;'>{{user.identifier}}</div>
-<div class='secret' style='display: none;'></div>
-<div class='username' style='display: none;'>{{user.displayName}}</div>
-<div class='link' style='display: none;'>{{user._json.profileurl}}</div>
+<div id='identifier' style='display: none;'>{{user.identifier}}</div>
+<div id='id' style='display: none;'>{{user.id}}</div>
+<div id='secret' style='display: none;'></div>
+<div id='username' style='display: none;'>{{user.displayName}}</div>
+<div id='link' style='display: none;'>{{user._json.profileurl}}</div>
+<div id='avatar' style='display: none;'>{{user.photos.2.value}}</div>

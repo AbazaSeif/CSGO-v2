@@ -57,7 +57,7 @@ class user {
         history: [],
         deposited: 0,
         tradelink: null,
-        previousRoll: App.moment().toDate()
+        previousRoll: App.moment().subtract(1, 'hours').toDate()
       }, function(err) {
         if(err) {
           debug(err);
