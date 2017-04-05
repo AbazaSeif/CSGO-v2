@@ -35,6 +35,33 @@ function roulette() {
     $('#bets_' + data.color).text(my_bets[data.color].amount);
   });
 
+  socket.on('preroll', function(data) {
+    $("#counter").finish();
+    $("#banner").html("Confirming " + data.totalbets + "/" + (data.totalbets + data.inprog) + " total bets...");
+    $(".bet_btn").prop("disabled", true);
+    $("#totalBets_green").countTo(data.sums[0]);
+    $("#totalBets_red").countTo(data.sums[1]);
+    $("#totalBets_black").countTo(data.sums[2]);
+    try {
+        tinysort("#panel-red>.bet", {
+            data: "amount",
+            order: "desc"
+        });
+    } catch (e) {}
+    try {
+        tinysort("#panel-black>.bet", {
+            data: "amount",
+            order: "desc"
+        });
+    } catch (e) {}
+    try {
+        tinysort("#panel-green>.bet", {
+            data: "amount",
+            order: "desc"
+        });
+    } catch (e) {}
+  })
+
   socket.on('found', function(bets) {
     if(bets.green > 0) {
       $('#bets_green').text(bets.green);
@@ -74,6 +101,20 @@ function roulette() {
       $('#totalBets_black').text(bets.black);
     }
   });
+
+  socket.on('spin', function(data) {
+    console.log('rodou');
+    spin({
+        roll: data.roll,
+        nets: data.nets,
+        length: data.length,
+        won: data.won,
+        balance: data.balance,
+        wait: data.wait,
+        wobble: data.wobble
+      }
+    );
+  });
 }
 
 function addBet(bet) {
@@ -88,7 +129,7 @@ function addBet(bet) {
     f += "<div class='username user'>{3}</div>";
     f += "<div class='amount'>{4}</div>";
     f += "</div>";
-    var $bet_list = $(f.format(bet.id, bet.amount, bet.avatar, bet.username, bet.amount));
+    var $bet_list = $(f.format(betid, bet.amount, bet.avatar, bet.username, bet.amount));
     $bet_list.hide().prependTo($panel).slideDown("fast", function() {
         snapRender();
     });

@@ -11,8 +11,10 @@ let debug = require('debug')('rouletteGame_controller');
 
 App.roulette = {};
 App.roulette.state = 'betting';
-App.roulette.time = 30;
+App.roulette.time = 5;
 App.roulette.started = false;
+App.roulette.roll = false;
+App.roulette.preroll = false;
 
 App.roulette.stats = {};
 App.roulette.stats.black = {
@@ -88,9 +90,14 @@ class rouletteGame {
   }
 
   start() {
-    setInterval(() => {
+    let timeInterval = setInterval(() => {
       App.roulette.time = App.roulette.time - 1;
       this.timeEmit();
+      if(App.roulette.time == 0) {
+        App.roulette.preroll = true;
+        clearInterval(timeInterval);
+        this.preroll();
+      }
     }, 1000);
   }
 
@@ -99,6 +106,157 @@ class rouletteGame {
       'state': App.roulette.state,
       'time': App.roulette.time
     });
+  }
+
+  preroll() {
+    let totalbets = Number(App.roulette.stats.green.bets) + Number(App.roulette.stats.green.bets) + Number(App.roulette.stats.green.bets);
+    let sumGreen = Number(App.roulette.stats.green.total), sumRed = Number(App.roulette.stats.red.total), sumBlack = Number(App.roulette.stats.black.total)
+    App.roulette.state = 'rolling';
+    App.io.emit('preroll', {
+      'sums': {
+        '0': sumGreen,
+        '1': sumRed,
+        '2': sumBlack
+      },
+      'totalbets': totalbets
+    });
+
+    this.spin();
+  }
+
+  addUser(data, socket) {
+    App.clients[data.identifier] = {
+      "socket": socket.id
+    };
+  }
+
+  spin() {
+    let rollN = Math.round(Math.random() * 14);
+    let won_red, won_green, won_black, won;
+    if(rollN >= 1 && rollN <= 7) {
+      won_red = Number(App.roulette.stats.red.total) * 2;
+    } else {
+      won_red = Number(App.roulette.stats.red.total) * -1;
+    } if(rollN >= 8 && rollN <= 14) {
+      won_black = Number(App.roulette.stats.black.total) * 2;
+    } else {
+      won_black = Number(App.roulette.stats.black.total) * -1;
+    } if(rollN == 0) {
+      won_green = Number(App.roulette.stats.green.total) * 14;
+    } else {
+      won_green = Number(App.roulette.stats.green.total) * -1;
+    }
+
+    App.roulette.stats.red.betters.forEach(function(bet) {
+      
+      if(rollN >= 1 && rollN <= 7) {
+        won = bet.amount * 2;
+      } else if(rollN >= 8 && rollN <= 14) {
+        won = bet.amount * -1;
+      } else if(rollN == 0) {
+        won = bet.amount * -1;
+      }
+
+      
+      debug(bet.identifier);
+      debug(App.clients[bet.identifier]);
+      debug(rollN);
+      debug(won);
+      App.io.sockets.connected[App.clients[bet.identifier].socket].emit('spin', {
+        roll: rollN,
+        //rollid: "1",
+        nets: {
+          0: {
+            swon: Number(App.roulette.stats.green.bets), samount: won_green
+          },
+          1: {
+            swon: Number(App.roulette.stats.red.bets), samount: won_red
+          },
+          2: {
+            swon: Number(App.roulette.stats.black.bets), samount: won_black
+          }
+        },
+        length: "250",
+        won: won,
+        balance: "500",
+        wait: "9",
+        wobble: "17"
+      });
+    });
+    App.roulette.stats.black.betters.forEach(function(bet) {
+      
+      if(rollN >= 1 && rollN <= 7) {
+        won = bet.amount * -1;
+      } else if(rollN >= 8 && rollN <= 14) {
+        won = bet.amount * 2;
+      } else if(rollN == 0) {
+        won = bet.amount * -1;
+      }
+
+      
+      debug(bet.identifier);
+      debug(App.clients[bet.identifier]);
+      debug(rollN);
+      debug(won);
+      App.io.sockets.connected[App.clients[bet.identifier].socket].emit('spin', {
+        roll: rollN,
+        //rollid: "1",
+        nets: {
+          0: {
+            swon: Number(App.roulette.stats.green.bets), samount: won_green
+          },
+          1: {
+            swon: Number(App.roulette.stats.red.bets), samount: won_red
+          },
+          2: {
+            swon: Number(App.roulette.stats.black.bets), samount: won_black
+          }
+        },
+        length: "250",
+        won: won,
+        balance: "500",
+        wait: "9",
+        wobble: "17"
+      });
+    });
+    App.roulette.stats.green.betters.forEach(function(bet) {
+      
+      if(rollN >= 1 && rollN <= 7) {
+        won = bet.amount * -1;
+      } else if(rollN >= 8 && rollN <= 14) {
+        won = bet.amount * -1;
+      } else if(rollN == 0) {
+        won = bet.amount * 2;
+      }
+
+      
+      debug(bet.identifier);
+      debug(App.clients[bet.identifier]);
+      debug(rollN);
+      debug(won);
+      App.io.sockets.connected[App.clients[bet.identifier].socket].emit('spin', {
+        roll: rollN,
+        //rollid: "1",
+        nets: {
+          0: {
+            swon: Number(App.roulette.stats.green.bets), samount: won_green
+          },
+          1: {
+            swon: Number(App.roulette.stats.red.bets), samount: won_red
+          },
+          2: {
+            swon: Number(App.roulette.stats.black.bets), samount: won_black
+          }
+        },
+        length: "250",
+        won: won,
+        balance: "500",
+        wait: "9",
+        wobble: "17"
+      });
+    });
+  
+    App.roulette.state = 'betting';
   }
 
   bet(data, socket) {
@@ -116,8 +274,8 @@ class rouletteGame {
       socket.emit('err', {'msg': 'You cannot bet less than 1 coin!'});
       return;
     } 
-    if(['red', 'green', 'black', 'gold'].indexOf(data.color) == -1) {
-      socket.emit('err', {'msg': 'Please choose a cup to bet on.'});
+    if(['red', 'green', 'black'].indexOf(data.color) == -1) {
+      socket.emit('err', {'msg': 'Please choose a color to bet on.'});
       return;
     }
 
@@ -168,7 +326,6 @@ class rouletteGame {
           // Emit to all clients connected
           App.io.emit('new_bet', App.roulette.stats);
           App.io.emit('my_bet', mybets);
-          debug(App.roulette.stats);
           
           socket.emit('betted', {'amount': data.amount, 'color': data.color, 'new_coins': new_coins});
         });

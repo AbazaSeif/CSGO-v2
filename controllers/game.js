@@ -14,6 +14,9 @@ App.game.state = 'betting';
 App.game.players = 0;
 App.game.time = 30;
 App.game.started = false;
+App.game.clientsConnected = {};
+
+App.clients = [];
 
 App.game.stats = {};
 App.game.stats.blue = {
@@ -40,10 +43,14 @@ class game {
     debug('exported');
   }
 
-  connection(socket) {
+  connection(data, socket) {
+    /*if() {
+
+    }*/
     App.game.players += 1;
     debug(App.game.players);
     socket.emit('new player', {'online': App.game.players});
+    App.game.clientsConnected[socket.id] = socket;
   }
 
   disconnection(socket) {

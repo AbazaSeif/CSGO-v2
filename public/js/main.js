@@ -92,7 +92,11 @@ $(function() {
 
 $(document).ready(function() {
   socket.emit('connected');
+
+  socket.emit('add-user', { 'identifier': $('#identifier').text()});
 });
+
+
 
 function scrollit() {
   var $target = $('#messages'); 

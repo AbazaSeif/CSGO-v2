@@ -25,14 +25,17 @@ module.exports = function() {
 
     socket.on('searchTime', (data) => { App.controllers.bombGame.searchTime(data, socket); });
     
-    // On roll
+    // Bomb Contoller
     socket.on('roll', (data) => { App.controllers.bombGame.roll(data, socket); });
+
+    // Roulette Controller
 
     // On chat
     socket.on('chat', (data) => { App.controllers.chat.chat(data, socket); });
 
     // On new player
-    socket.on('connected', (data) => { App.controllers.game.connection(socket); });
+    socket.on('connected', (data) => { App.controllers.game.connection(data, socket); });
+    socket.on('add-user', (data) => { App.controllers.rouletteGame.addUser(data, socket); });
     socket.on('disconnect', (data) => { App.controllers.game.disconnection(socket); });
   });
 

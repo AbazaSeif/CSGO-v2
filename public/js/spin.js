@@ -260,7 +260,7 @@ function finishRoll(m, tf) {
         $(".total,.mytotal").removeClass("text-success text-danger").html(0);
         $(".betlist li").remove();
         snapRender();
-        $(".betButton").prop("disabled", false);
+        $(".bet_btn").prop("disabled", false);
         showbets = true;
     }, m.wait * 1000 - tf);
 }
